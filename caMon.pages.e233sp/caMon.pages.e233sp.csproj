@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IAtsPI">
+      <HintPath>..\bin\ref\IAtsPI.dll</HintPath>
+    </Reference>
+    <Reference Include="TR.BIDSSMemLib.rw">
+      <HintPath>..\bin\ref\TR.BIDSSMemLib.rw.dll</HintPath>
+    </Reference>
+    <Reference Include="TR.BIDSSMemLib.structs">
+      <HintPath>..\bin\ref\TR.BIDSSMemLib.structs.dll</HintPath>
+    </Reference>
+    <Reference Include="TR.SMemCtrler">
+      <HintPath>..\bin\ref\TR.SMemCtrler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,4970 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			x:Class="caMon.pages.e235sp.e235"
+			mc:Ignorable="d" 
+			Title="e235">
+
+	<Viewbox>
+		<Grid Background="Black"
+							Height="1200"
+							Width="1920">
+			<Rectangle Fill="#FFD2DCC8"
+											 Margin="10,10,10,10"/>
+			<Grid>
+
+				<Path Data="M138.80023,0 L139.91162,0.0015500684 139.99996,0.00056330163 140.11347,0.0018315685 141.7112,0.0040599444 143.12944,0.035529962 143.14287,0.035679943 143.1559,0.036117057 144.62383,0.068689419 C153.36327,0.35360663 162.11217,1.4585159 170.75258,3.4042152 L171.09253,3.4845666 171.22061,3.5122565 171.93825,3.6844515 173.62853,4.0839533 173.9496,4.1670698 174.29402,4.2497143 175.56844,4.5861486 176.49547,4.8261389 176.76329,4.9015812 177.35353,5.0574011 178.91887,5.5088123 179.35245,5.6309508 179.52823,5.6845383 180.39788,5.9353255 182.12577,6.4763941 182.19846,6.4985565 182.23809,6.5115665 183.4258,6.8834833 C195.50292,10.816582 207.15541,16.435292 218.01932,23.739613 L219.76686,24.944552 220.08057,25.158043 220.20262,25.245003 220.71865,25.600811 221.69412,26.307717 222.5311,26.904066 223.02257,27.270419 223.38387,27.532244 223.85991,27.894577 224.93619,28.696839 225.86785,29.42289 226.0137,29.533909 226.14847,29.641587 227.29546,30.53545 C233.52545,35.498722 239.26271,40.941246 244.47484,46.785397 L245.17336,47.585385 245.33562,47.766045 245.57103,48.040825 246.40471,48.995625 247.06601,49.785908 247.46878,50.256047 247.85259,50.725884 248.28498,51.242604 248.83016,51.922589 249.53552,52.786068 249.97568,53.351342 250.11524,53.52541 250.4037,53.901043 251.53572,55.354855 C261.37013,68.293587 268.70406,82.638771 273.46324,97.683449 L274.06996,99.67923 274.07848,99.70649 274.08296,99.722 274.38072,100.7015 274.77403,102.10813 274.88674,102.4973 274.97142,102.81411 275.22945,103.73695 275.47621,104.70265 275.63741,105.30576 275.80553,105.99152 276.0092,106.78853 276.15157,107.40283 276.3301,108.13094 276.58724,109.28255 276.71993,109.855 276.78734,110.17871 276.96446,110.97195 277.32094,112.74072 277.36144,112.9351 277.37609,113.01425 277.54009,113.82787 C279.54256,124.32581 280.35301,135.10612 279.88719,145.96703 L279.81774,147.26344 279.81398,147.35598 279.80626,147.47791 279.72844,148.93095 279.63787,150.13891 279.61492,150.50155 279.58162,150.88929 279.506,151.89796 279.40553,152.93937 279.34499,153.6444 279.27825,154.25855 279.21953,154.86713 279.12752,155.6461 279.00398,156.78329 278.898,157.58913 278.86864,157.83758 278.81322,158.23376 278.59184,159.91694 C275.45732,181.83134 267.08211,203.26916 253.2623,222.2905 L248.40821,218.7638 C257.22655,206.62638 263.72881,193.46098 267.97273,179.81779 L268.83113,176.94233 268.80901,176.93598 C270.42885,171.28693 271.66124,165.60336 272.51927,159.91663 L272.8636,157.45579 272.94551,156.83321 273.1646,154.97855 273.30944,153.64518 273.43077,152.38769 273.59981,150.41946 273.65319,149.70747 273.81478,147.15395 273.82543,146.95483 273.94469,144.0286 C274.21153,134.99125 273.56557,125.95132 272.02217,117.05498 L271.48824,114.16923 271.43657,113.9129 270.92464,111.45507 270.73424,110.60226 270.31597,108.79767 269.98598,107.45181 269.66945,106.21307 269.18758,104.41023 268.99715,103.72914 268.33711,101.4501 268.32311,101.40405 267.50389,98.779938 C262.94051,84.677094 256.05635,71.368958 247.09963,59.449906 L245.67308,57.592293 245.26195,57.064305 244.16673,55.698288 243.22978,54.551319 242.47792,53.652821 241.04598,51.981331 240.66628,51.54646 238.71604,49.375172 C235.86688,46.277005 232.84889,43.2874 229.66342,40.419182 228.07068,38.985073 226.45214,37.595784 224.8094,36.251305 L222.45601,34.370995 222.18813,34.162228 220.26564,32.698952 219.46453,32.101796 218.19292,31.180285 216.76532,30.163102 216.34838,29.875618 214.25992,28.454321 C211.0465,26.317683 207.71906,24.305008 204.28148,22.425589 197.40631,18.666743 190.32025,15.566477 183.10259,13.110808 L180.42629,12.23205 180.32327,12.199795 177.83266,11.440532 177.25469,11.273858 175.1861,10.691136 174.04953,10.391091 172.49317,9.9881834 170.57685,9.5283684 169.75864,9.3349861 166.92877,8.7231468 C160.02342,7.3114485 153.02918,6.4487423 146.01517,6.1350306 L143.02452,6.0347403 142.9913,6.0340032 140.11289,6.0018429 139.91205,6.001563 137.22611,6.0315722 136.85602,6.0387415 134.37615,6.1219 133.82129,6.1441664 131.58963,6.2689928 130.80718,6.3166446 128.94713,6.4624781 127.81314,6.5551323 126.87865,6.6494836 124.97711,6.8445195 C109.33235,8.6127724 94.033175,13.126057 79.840426,20.250214 L77.350458,21.532952 77.343958,21.536394 74.994379,22.809948 74.66968,22.991696 72.601771,24.169546 71.939669,24.560654 70.192621,25.605143 69.003878,26.34525 67.778277,27.113608 65.324259,28.722224 C60.991633,31.635256 56.790041,34.828385 52.744692,38.301613 L50.392267,40.370072 50.300196,40.452576 48.164732,42.421418 47.896452,42.67244 46.12467,44.384991 45.55831,44.938282 44.420077,46.091549 43.341357,47.191872 C41.995932,48.594216 40.675734,50.030945 39.381998,51.501847 29.678988,62.533608 22.072357,74.796448 16.586796,87.760216 L15.717378,89.876732 15.469654,90.487214 14.788354,92.250466 14.401578,93.269287 13.846495,94.800805 13.394778,96.076928 12.931041,97.445305 12.449365,98.91034 12.058031,100.1498 11.565109,101.77126 11.235094,102.89796 10.741591,104.66303 10.466697,105.67966 9.9772446,107.59511 9.7555554,108.48838 9.2684491,110.59007 9.1034634,111.3194 8.6046402,113.71436 8.5116198,114.16926 7.9776738,117.05497 C7.8061836,118.04345 7.6457751,119.03371 7.4964683,120.02554 L7.0930564,122.9251 7.0206563,123.53132 6.7584054,125.78404 6.6588576,126.79459 6.4857561,128.63961 6.389816,129.8746 6.2747185,131.48844 6.195112,132.88673 6.1247694,134.32574 6.0689776,135.86568 6.0351055,137.14466 6.0089648,138.82508 6.0044243,139.93391 6.0138113,141.77093 6.0303213,142.67258 6.0827477,144.7057 6.1076147,145.31579 6.2152693,147.63099 6.2220414,147.738 6.4028704,150.42625 C7.5517943,165.21755 11.157104,179.88146 17.248768,193.77457 L18.377957,196.27696 18.433399,196.39822 19.479603,198.59057 19.734387,199.11512 20.710205,201.05221 21.104929,201.81878 22.035618,203.57169 22.547283,204.51067 23.443032,206.11367 24.064289,207.19276 24.927021,208.66152 25.661843,209.87122 26.484595,211.20522 27.353838,212.56316 28.114796,213.73936 29.18813,215.33221 29.817148,216.25988 31.59165,218.7638 26.737545,222.2905 C26.136061,221.46262 25.5448,220.62997 24.963755,219.79269 L24.883625,219.67451 24.800301,219.55694 24.226475,218.70536 23.251255,217.26713 23.104918,217.04095 22.937004,216.79176 22.310295,215.81271 21.60001,214.71482 21.401737,214.39335 21.147516,213.99621 20.542549,213.00028 20.009968,212.13676 19.774283,211.73551 19.431711,211.17155 18.873419,210.20184 18.481083,209.5339 18.223955,209.07375 17.78945,208.31905 17.288374,207.39948 17.013312,206.90725 16.753355,206.41763 16.220608,205.43995 15.781571,204.58732&#xD;&#xA;15.606606,204.25777 15.368537,203.78519 14.725046,202.53552 14.349428,201.76217 14.260924,201.58648 14.082931,201.21349 13.302639,199.607 12.990381,198.92403 12.976212,198.89434 12.931316,198.79485 11.953252,196.65566 C5.3886406,181.84402 1.5573038,166.22364 0.38493531,150.50153 L0.23234617,148.09008 0.22588812,147.99407 0.22482646,147.97123 0.1858937,147.35597 0.1126262,145.55833 0.090987813,145.09298 0.086385158,144.9145 0.057627842,144.20893 0.031757728,142.79609 0.016147979,142.19076 0.014396385,141.84794 0,141.0617 0.0046171534,139.93395 0.0013185431,139.28835 0.0093828241,138.76994 0.012880831,137.91554 0.036612012,137.01946 0.046453607,136.38677 0.072155152,135.67738 0.096140985,134.77168 0.13024225,134.07407 0.15151145,133.48701 0.20405335,132.56411&#xD;&#xA;0.24964694,131.6314 0.2868612,131.1096 0.316442,130.59002 0.40765761,129.41586 0.47326516,128.49593 0.50731992,128.13296 0.54120349,127.6968 0.68905037,126.19598 0.76686632,125.36657 0.79215412,125.14935 0.82574593,124.80835 1.0677169,122.78227 1.1303168,122.24454 1.1417606,122.16229 1.1700234,121.92564 C1.5441565,119.04613 2.0078246,116.1767 2.5608234,113.3218 L2.6244728,113.01054 2.638438,112.93507 2.7190518,112.54802 3.1435902,110.47191 3.2429459,110.0327 3.2799635,109.85497 3.4129474,109.28119 3.7858627,107.63268 3.9243674,107.07459 3.990675,106.7885 4.1538145,106.15006 4.4875986,104.80511 4.6674449,104.13998 4.7704427,103.73691 4.9525978,103.08541 5.2487485,101.99017 5.470442,101.23329 5.619138,100.70146 5.8131215,100.06335 6.0692704,99.188843 6.330404,98.361763 6.5366232,97.683411 6.7370546,97.073792&#xD;&#xA;6.9491184,96.40213 7.2429044,95.535233 7.5227721,94.684014 7.7247951,94.113289 7.8882382,93.631005 8.1998694,92.771195 8.5774481,91.704522 8.7767393,91.179558 8.886596,90.876458 9.1845667,90.105286 9.7005169,88.746201 9.8926556,88.272698 9.9441349,88.139466 10.156457,87.622589 10.89185,85.810295 C17.427439,70.214203 26.86998,55.62846 39.129297,42.911087 L40.130003,41.897164 41.141459,40.865452 41.331553,40.679745 41.460905,40.548684 41.914526,40.110226 43.308127,38.748787 43.774489,38.312436 43.858401,38.231327 44.048064,38.056466 45.512385,36.686367 46.28623,35.992936 46.321654,35.960274 46.376234,35.912281 47.753256,34.678349 C53.023936,30.056584 58.585745,25.880537 64.383188,22.159998 L64.546671,22.057509 64.712778,21.948626 65.811121,21.264798 66.882075,20.593398 67.069224,20.481507 67.476565,20.227898 68.884394,19.396292 69.408838,19.082743 69.586573,18.981511 70.270685,18.577404 71.738932,17.755562 71.962519,17.628212 72.086779,17.560858 73.093874,16.997143 74.533465,16.234661 74.542132,16.229964 74.54954,16.226147 75.944865,15.487114 C91.222033,7.6209272 107.63153,2.751383 124.31063,0.87848349 L126.2618,0.68148126 127.19251,0.58602144 127.26983,0.5797034 127.44092,0.56242956 128.43836,0.48422809 130.08708,0.34951822 130.3983,0.33056514 130.57625,0.31661306 131.20337,0.28153609 132.9872,0.17290021 133.54773,0.15040691 133.71538,0.14102986 134.11722,0.12755436 135.89191,0.056338506 136.71816,0.040332942 136.85703,0.03567577 137.09691,0.032995837 z"
+											Fill="#FF999999"
+											HorizontalAlignment="Left"
+											Height="222.291"
+											Margin="1318,662.999,0,0"
+											Stretch="Fill"
+											VerticalAlignment="Top"
+											Width="280.015"/>
+
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="-36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="0"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="72"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="108"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="144"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="180"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF999999"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 Margin="1130,800,0,0"
+											 VerticalAlignment="Top"
+											 Width="194">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="328"
+																		 CenterY="3"
+																		 Angle="216"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="-36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="-18"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="0"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="18"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="54"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="72"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="90"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="108"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="126"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="144"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="162"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="180"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="198"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="8"
+											 Margin="1128,799,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="4"
+																		 Angle="216"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-27"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-9"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="9"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="27"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="45"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="63"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="81"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="99"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="117"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="135"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="153"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="171"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="189"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="45">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="207"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-34.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-32.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-30.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-28.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-25.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-23.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-21.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-19.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-16.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-14.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-12.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-10.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-7.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-5.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-3.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="-1.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="1.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="3.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="5.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="7.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="10.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="12.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="14.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="16.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="19.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="21.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="23.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="25.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="28.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="30.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="32.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="34.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="37.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="39.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="41.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="43.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="46.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="48.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="50.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="52.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="55.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="57.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="59.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="61.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="64.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="66.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="68.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="70.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="73.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="75.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="77.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="79.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="82.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="84.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="86.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="88.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="91.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="93.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="95.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="97.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="100.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="102.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="104.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="106.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="109.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="111.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="113.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="115.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="118.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="120.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="122.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="124.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="127.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="129.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="131.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="133.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="136.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="138.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="140.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="142.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="145.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="147.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="149.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="151.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="154.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="156.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="158.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="160.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="163.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="165.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="167.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="169.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="172.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="174.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="176.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="178.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="181.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="183.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="185.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="188.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="190.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="192.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="194.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="196.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="199.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="201.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="203.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="205.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="208.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="210.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="212.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="1128,801,0,0"
+											 VerticalAlignment="Top"
+											 Width="25">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="330"
+																		 CenterY="2"
+																		 Angle="214.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Label Content="0"
+									 HorizontalAlignment="Left"
+									 Margin="1235,910,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="20"
+									 HorizontalAlignment="Left"
+									 Margin="1175,760,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="40"
+									 HorizontalAlignment="Left"
+									 Margin="1220,615,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="60"
+									 HorizontalAlignment="Left"
+									 Margin="1340,525,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="80"
+									 HorizontalAlignment="Left"
+									 Margin="1505,525,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="100"
+									 HorizontalAlignment="Left"
+									 Margin="1595,615,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="120"
+									 HorizontalAlignment="Left"
+									 Margin="1645,760,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+				<Label Content="140"
+									 HorizontalAlignment="Left"
+									 Margin="1585,910,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="52"/>
+
+				<Label Content="km/h"
+									 HorizontalAlignment="Left"
+									 Margin="1580,970,0,0"
+									 VerticalAlignment="Top"
+									 FontFamily="Arial"
+									 FontSize="44"
+									 FontWeight="Bold"/>
+
+			</Grid>
+			<Path Data="M15.322662,0 C55.052032,30.817265 85.890656,71.275433 105.11343,117.22584 L106.0806,119.57171 106.08206,119.57113 106.12955,119.69038 106.25284,119.98942 C106.62796,120.91279 106.99844,121.83833 107.36423,122.76599 L107.75821,123.78044 107.90817,124.15704 108.05222,124.53752 108.44748,125.55534 C108.80386,126.48722 109.15555,127.42122 109.50247,128.35727 L109.60953,128.65078 109.65561,128.77237 109.76559,129.07853 110.52908,131.17158 111.18692,133.03457 111.32394,133.41606 111.38596,133.59831 111.52713,133.99809 C111.85507,134.94226 112.17819,135.88844 112.49649,136.83657 L112.7869,137.7165 112.91299,138.08714 113.0524,138.5211 113.4371,139.68684 C113.74582,140.63888 114.04971,141.59285 114.34879,142.5487 L114.39816,142.70945 114.42233,142.78459 114.49289,143.01786 115.23141,145.42196 115.70993,147.03927 115.85159,147.50737 115.92831,147.77742 116.08487,148.30641 C116.36447,149.26973 116.63913,150.23489 116.90897,151.20184 L117.10184,151.90721 117.20053,152.25447 117.33096,152.74507 117.70364,154.10806 C117.96359,155.07858 118.21866,156.05087 118.46872,157.02488 L94.254181,163.24214 93.213959,159.32933 93.005585,158.56723 91.932159,154.7897 91.734406,154.12138 90.618683,150.43467 90.53537,150.16339 89.303314,146.32901 89.063446,145.60211 87.780792,141.83149 87.602753,141.32739 86.29837,137.69673 86.159943,137.31733 84.733795,133.55049 84.468903,132.86843 82.977325,129.12266 82.050262,126.87403 C64.48465,84.884853 36.304443,47.914455 0,19.75388 z"
+								Fill="#FF338855"
+								HorizontalAlignment="Left"
+										Height="163.242" Margin="792.42,570.855,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+										Width="118.469"/>
+			<Path Data="M24.214539,0 C28.412964,16.351852 31.175537,33.039093 32.470764,49.871567 34.675171,78.521164 32.609497,107.33934 26.341309,135.38161 L1.9433594,129.92802 C7.6712036,104.30318 9.5588379,77.969376 7.5444336,51.789536 6.3609009,36.408051 3.8365479,21.159576 0,6.2172546 z"
+								Fill="#FFDD3333"
+								HorizontalAlignment="Left"
+										Height="135.382" Margin="886.675,727.88,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+										Width="33.325"/>
+			<Grid>
+				<!--2.7/10kPa-->
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="225"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="198"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="171"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="144"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="117"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="90"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="63"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="9"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="-18"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="10"
+											 Margin="345,795,0,0"
+											 VerticalAlignment="Top"
+											 Width="40">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="5"
+																		 Angle="-45"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-39.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-34.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-28.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-23.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-12.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-7.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="-1.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="3.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="14.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="19.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="25.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="30.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="41.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="46.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="52.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="57.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="68.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="73.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="79.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="84.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="95.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="100.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="106.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="111.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="122.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="127.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="133.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="138.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="149.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="154.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="160.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="165.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="176.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="181.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="187.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="192.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="203.4"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="208.8"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="214.2"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="#FF000000"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 Margin="345,798,0,0"
+											 VerticalAlignment="Top"
+											 Width="20">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="285"
+																		 CenterY="2"
+																		 Angle="219.6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Label Content="0"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="450,910,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="200"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="385,725,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="400"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="485,570,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="600"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="670,570,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="800"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="775,725,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="1000"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="685,910,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="54"/>
+				<Label Content="kPa"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="710,975,0,0"
+									 FontFamily="Arial"
+									 FontSize="42" FontWeight="Bold"/>
+				<Label Content="BC/"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="565,1020,0,0"
+									 FontSize="40" FontFamily="Myriad Pro"/>
+				<Label Content="MR"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 Margin="630,1020,0,0"
+									 FontFamily="Myriad Pro"
+									 FontSize="40"
+									 Foreground="#FFDD3333"/>
+			</Grid>
+			<Grid>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="90"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="-45"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="225"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="22.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="157.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="-31.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="-18"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="-4.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="9"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="49.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="63"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="76.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="103.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="117"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="130.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="144"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="171"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="184.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="198"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="4"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="120,203,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="2"
+																		 Angle="211.5"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="-38.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="-24.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="-11.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="2.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="15.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="29.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="42.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="56.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="69.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="83.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="96.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="110.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="123.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="137.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="150.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="164.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="177.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="191.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="205.75"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="3"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="120,203.5,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1.5"
+																		 Angle="218.25"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Label Content="0"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="245,70,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content=".5"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="345,130,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+				<Label Content=".5"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="140,130,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+				<Label Content="1"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="165,255,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+				<Label Content="1"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="320,255,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+				<Label Content="－"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="170,290,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+				<Label Content="＋"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="315,290,0,0"
+									 FontFamily="Century Gothic"
+									 FontSize="36"/>
+
+				<Label Content="kA"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+									 VerticalAlignment="Top"
+											 Width="70"
+											 Height="60"
+									 Margin="235,265,0,0"
+									 FontFamily="Arial"
+									 FontSize="40" FontWeight="Bold"/>
+			</Grid>
+			<Grid>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="0"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="30"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="60"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="90"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="120"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="150"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="180"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="210"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="240"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="270"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="300"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="6"
+											 VerticalAlignment="Top"
+											 Width="20"
+											 Margin="540,202,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="3"
+																		 Angle="330"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="6"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="12"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="18"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="24"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="36"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="42"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="48"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="54"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="66"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="72"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="78"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="84"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="96"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="102"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="108"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="114"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="126"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="132"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="138"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="144"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="156"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="162"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="168"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="174"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="186"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="192"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="198"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="204"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="216"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="222"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="228"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="234"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="246"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="252"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="258"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="264"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="276"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="282"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="288"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="294"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="306"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="312"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="318"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="324"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="336"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="342"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="348"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+				<Rectangle Fill="Black"
+											 HorizontalAlignment="Left"
+											 Height="2"
+											 VerticalAlignment="Top"
+											 Width="10"
+											 Margin="540,204,0,0">
+					<Rectangle.RenderTransform>
+						<RotateTransform CenterX="150"
+																		 CenterY="1"
+																		 Angle="354"/>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+
+				<Label Content="Tech Otter"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 HorizontalContentAlignment="Center"
+									 Margin="590,128,0,0"
+									 Width="200"
+									 FontFamily="Myriad Pro"
+									 FontSize="20" FontWeight="Bold">
+					<Label.BitmapEffect>
+						<DropShadowBitmapEffect ShadowDepth="2" Opacity="0.5"/>
+					</Label.BitmapEffect>
+				</Label>
+				<Label Content="BVE Time Clock"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 HorizontalContentAlignment="Center"
+									 Margin="590,235,0,0"
+									 Width="200"
+									 FontFamily="Arial"
+									 FontSize="16" FontWeight="Bold"/>
+				<Label  Content="tecnotter.com"
+									 HorizontalAlignment="Left"
+									 VerticalAlignment="Top"
+									 HorizontalContentAlignment="Center"
+									 Margin="590,256,0,0"
+									 Width="200"
+									 FontFamily="Arial"
+									 FontSize="14" FontWeight="Bold"/>
+
+				<Label Content="12"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="665,70,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="1"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="720,82,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="2"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="765,115,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="3"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="785,180,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="4"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="765,240,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="5"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="720,275,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="6"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="665,290,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="7"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="610,275,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="8"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="570,240,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="9"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="550,180,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="10"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="570,115,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+				<Label Content="11"
+											 Width="50"
+											 Height="50"
+									 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 VerticalContentAlignment="Center"
+									 VerticalAlignment="Top"
+									 Margin="605,82,0,0"
+									 FontFamily="Century Gothic"
+									 FontStyle="Italic"
+									 FontSize="36"/>
+			</Grid>
+			<Path Fill="#FF222222"
+								HorizontalAlignment="Left"
+								Height="1200"
+								VerticalAlignment="Top"
+								Width="1920" Data="M630,510 C469.83743,510 340,639.8374 340,800 340,960.1626 469.83743,1090 630,1090 790.1626,1090 920,960.1626 920,800 920,639.8374 790.1626,510 630,510 z M1458,473 C1275.746,473 1128,620.74603 1128,803 1128,916.90875 1185.7133,1017.3378 1273.4939,1076.6412 L1286.5323,1085 1629.4677,1085 1642.5062,1076.6412 C1730.2867,1017.3378 1788,916.90875 1788,803 1788,620.74603 1640.254,473 1458,473 z M690,54.999992 C607.15729,55 540,122.15729 540,204.99998 540,287.84271 607.15729,355 690,355 772.84271,355 840,287.84271 840,204.99998 840,122.15729 772.84271,55 690,54.999992 z M270,54.999992 C187.15729,55 120,122.15729 120,204.99998 120,287.84271 187.15729,355 270,355 352.84271,355 420,287.84271 420,204.99998 420,122.15729 352.84271,55 270,54.999992 z M0,0 L1920,0 1920,1200 0,1200 z" Stretch="Fill">
+				<Path.BitmapEffect>
+					<DropShadowBitmapEffect Softness="0.5"
+																						ShadowDepth="15"
+																						Noise="0.0"
+																						Opacity="0.5" />
+				</Path.BitmapEffect>
+			</Path>
+			<!--<Path Fill="#4C00FF00"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Top"
+								Width="90"
+											 Data="M43,0 L47,0 C48.656853,0 50,1.3431473 50,3 L50,40 87,40 C88.656853,40 90,41.343146 90,43 L90,47 C90,48.656855 88.656853,50 87,50 L50,50 50,87 C50,88.656853 48.656853,90 47,90 L43,90 C41.343147,90 40,88.656853 40,87 L40,50 2.9999998,50 C1.3431457,50 0,48.656855 0,47 L0,43 C0,41.343146 1.3431457,40 2.9999998,40 L40,40 40,3 C40,1.3431473 41.343147,0 43,0 z" Height="90" Margin="1405,1095,0,0" RenderTransformOrigin="0,0.444444444444444" Stretch="Fill">
+										<Path.RenderTransform>
+												<RotateTransform CenterX="45"
+												CenterY="5"
+												Angle="45"/>
+										</Path.RenderTransform>
+								</Path>-->
+			<Grid>
+				<Rectangle Fill="#FF333333"
+											 HorizontalAlignment="Right"
+											 Height="300"
+											 Margin="0,00,0,0"
+											 VerticalAlignment="Top"
+											 Width="810"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1185,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1285,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1385,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1485,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1585,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,20,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,105,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,190,0,0"/>
+
+				<Rectangle Fill="#DDFFFFFF"
+											 HorizontalAlignment="Left"
+											 Height="280"
+											 VerticalAlignment="Top"
+											 Width="115"
+											 Margin="1790,10,0,0"/>
+				<Rectangle Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="260"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1800,20,0,0"/>
+			</Grid>
+			<Grid>
+				<Grid>
+					<Path 
+										Data="M23,0 L38,60 38,285.58823 39.263458,286.73654 C43.425636,290.89874 46,296.64874 46,303 46,309.35126 43.425636,315.10126 39.263458,319.26346 L38,320.41177 38,350 8.0000004,350 8.0000004,320.41177 6.7365421,319.26346 C2.5743623,315.10126 -4.7683716E-07,309.35126 0,303 -4.7683716E-07,296.64874 2.5743623,290.89874 6.7365421,286.73654 L8.0000004,285.58823 8.0000004,60 z"
+									Fill="#FF191919"
+								HorizontalAlignment="Left"
+								Height="350" Margin="1435,500,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="46">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="SPHari"
+																				 CenterX="23"
+																		 CenterY="303"
+																		 Angle="0"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Label x:Name="Speed"
+											 Content="70"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Right"
+									 Margin="1250,955,0,0"
+									 VerticalAlignment="Top"
+									 Width="280"
+									 Height="180"
+									 FontFamily="Myriad Pro"
+									 FontSize="125"
+									 FontStyle="Italic">
+					</Label>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path
+										Data="M23.000001,0 L38.000001,44.999999 38.000001,245.07246 38.464681,245.47499 C43.093785,249.68233 46.000001,255.75177 46.000001,262.5 46.000001,269.24823 43.093785,275.31767 38.464681,279.52502 L38.000001,279.92754 38.000001,310 8.0000014,310 8.0000014,279.92754 7.5353215,279.52502 C2.9062152,275.31767 9.5367432E-07,269.24823 0,262.5 9.5367432E-07,255.75177 2.9062152,249.68233 7.5353215,245.47499 L8.0000014,245.07246 8.0000014,44.999999 z" Fill="#FFD73B41"
+								HorizontalAlignment="Left"
+											 Height="310" Margin="607,537.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+											 Width="46">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="MRHari"
+																				 CenterX="23"
+																		 CenterY="262.5"
+																		 Angle="81"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path
+										Data="M23.000001,0 L38.000001,44.999999 38.000001,245.07246 38.464681,245.47499 C43.093785,249.68233 46.000001,255.75177 46.000001,262.5 46.000001,269.24823 43.093785,275.31767 38.464681,279.52502 L38.000001,279.92754 38.000001,310 8.0000014,310 8.0000014,279.92754 7.5353215,279.52502 C2.9062152,275.31767 9.5367432E-07,269.24823 0,262.5 9.5367432E-07,255.75177 2.9062152,249.68233 7.5353215,245.47499 L8.0000014,245.07246 8.0000014,44.999999 z"
+									Fill="#FF191919"
+								HorizontalAlignment="Left"
+											 Height="310" Margin="607,537.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+											 Width="46">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="BCHari"
+																				 CenterX="23"
+																		 CenterY="262.5"
+																		 Angle="-81"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path
+										Data="M10.000001,0 L15,9.999999 15,128.34874 15.591096,128.70784 C18.251113,130.50491 20.000001,133.54822 20.000002,137 20.000001,140.45178 18.251113,143.49509 15.591096,145.29216 L15,145.65126 15,154 5.0000017,154 5.0000017,145.65126 4.4089057,145.29216 C1.7488892,143.49509 1.4305115E-06,140.45178 0,137 1.4305115E-06,133.54822 1.7488892,130.50491 4.4089057,128.70784 L5.0000017,128.34874 5.0000017,9.999999 z"
+									Fill="#FF191919"
+								HorizontalAlignment="Left"
+											 Height="154" Margin="260,68,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+											 Width="20">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="Current"
+																				 CenterX="10"
+																		 CenterY="137"
+																		 Angle="-0"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path
+										Fill="#FF666666"
+										HorizontalAlignment="Left"
+										Height="95"
+										Margin="680,105,0,0"
+										VerticalAlignment="Top"
+										Width="20" Data="M10,0 L15.997492,14.993729 16.36093,15.850542 C18.583401,21.352983 20,29.680195 20,39 20,48.319805 18.583401,56.647018 16.36093,62.14946 L16,63.000359 16,95 12,95 12,71.334724 12.057683,71.173225 C13.792721,66.15274 15,54.978691 14.999999,42 15,24.326887 12.761424,10 10,10 7.2385765,10 5.0000001,24.326887 5.0000006,42 5.0000001,54.978691 6.2072793,66.15274 7.9423171,71.173225 L8.0000001,71.334724 8.0000001,95 3.9999994,95 3.9999994,63.000359 3.6390713,62.14946 C1.4165993,56.647018 2.2351742E-07,48.319805 0,39 2.2351742E-07,29.680195 1.4165993,21.352983 3.6390713,15.850542 L4.0025078,14.993729 z" Stretch="Fill">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="Hour"
+														CenterX="10"
+														CenterY="100"
+														Angle="0"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path
+										Fill="#FF333333"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Top"
+										Data="M10.000001,0 L14.000001,9.999999 14.000001,125.83766 14.766595,126.20695 C17.883846,127.90034 20.000001,131.20305 20.000002,135 20.000001,140.52284 15.522848,145 10.000001,145 4.4771534,145 9.5367432E-07,140.52284 0,135 9.5367432E-07,131.20305 2.1161551,127.90034 5.2334067,126.20695 L6.000001,125.83766 6.000001,9.999999 z"
+												Height="145"
+												Margin="680,70,0,0"
+												Stretch="Fill"
+												Width="20">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="Minute"
+														CenterX="10"
+														CenterY="135"
+														Angle="0"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+				<Grid>
+					<Path 
+										Fill="#FFD73B41"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Top"
+										Data="M4.9999998,140 C7.7614236,140 9.9999998,142.23857 9.9999993,145 9.9999998,147.76143 7.7614236,150 4.9999998,150 2.2385761,150 -2.3841858E-07,147.76143 0,145 -2.3841858E-07,142.23857 2.2385761,140 4.9999998,140 z M4.9999998,0 L5.9999988,9.999999 5.9999988,140 4.9999998,140 4.0000007,140 4.0000007,9.999999 z"
+												Height="150"
+												Margin="685,60,0,0"
+												Stretch="Fill"
+												Width="10">
+						<Path.RenderTransform>
+							<RotateTransform x:Name="Second"
+														CenterX="5"
+														CenterY="145"
+														Angle="0"/>
+						</Path.RenderTransform>
+					</Path>
+					<Grid.BitmapEffect>
+						<DropShadowBitmapEffect Direction="315"
+																						Softness="0.5"
+																						ShadowDepth="5"/>
+					</Grid.BitmapEffect>
+				</Grid>
+			</Grid>
+			<Grid>
+				<Label Content="非常"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="55"
+									 Margin="47.5,450,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="170"
+									 FontFamily="MS PGothic"
+									 FontSize="40"
+											 Foreground="#AAFFFFFF"/>
+				<Ellipse Fill="#FF888888"
+										 HorizontalAlignment="Left"
+										 Height="16"
+										 Margin="1450,795,0,0"
+										 VerticalAlignment="Top"
+										 Width="16"/>
+				<Ellipse Fill="#FF888888"
+										 HorizontalAlignment="Left"
+										 Height="16"
+										 Margin="622,792,0,0"
+										 VerticalAlignment="Top"
+										 Width="16"/>
+				<Ellipse Fill="#FF888888"
+										 HorizontalAlignment="Left"
+										 Height="10"
+										 Margin="265,200,0,0"
+										 VerticalAlignment="Top"
+										 Width="10"/>
+
+				<Rectangle x:Name="B1B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,1115,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B2B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,1042.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B3B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,970,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B4B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,897.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B5B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,825,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B6B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,752.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B7B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,680,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B8B"
+													 Fill="#FF111111"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,607.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+
+
+				<Rectangle x:Name="B1R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,1115,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B2R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,1042.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B3R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,970,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B4R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,897.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B5R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,825,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B6R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,752.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B7R"
+													 Fill="#FFF0C828"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,680,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Rectangle x:Name="B8R"
+													 Fill="#FFF0AA50"
+											 HorizontalAlignment="Left"
+											 Height="45"
+											 Margin="70,607.5,0,0"
+											 VerticalAlignment="Top"
+											 Width="125"/>
+				<Path x:Name="B1E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,1097.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+				<Path x:Name="B2E"
+											Data="M62.5,1.1368684E-13 C75.61676,-8.9406956E-07 87.258934,6.3134833 94.553413,16.067361 L95.572182,17.499999 125,17.499999 125,62.499999 95.572182,62.499999 94.553413,63.932635 C87.258934,73.686515 75.61676,79.999999 62.5,79.999999 49.383236,79.999999 37.741068,73.686515 30.446583,63.932635 L29.427815,62.499999 0,62.499999 0,17.499999 29.427815,17.499999 30.446583,16.067361 C37.741068,6.3134833 49.383236,-8.9406956E-07 62.5,1.1368684E-13 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+								Height="80"
+										 Margin="70,1025,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+										 Width="125"/>
+				<Path x:Name="B3E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,952.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+				<Path x:Name="B4E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,880,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+				<Path x:Name="B5E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,807.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+				<Path x:Name="B6E"
+											Data="M62.5,1.1368684E-13 C75.61676,-8.9406956E-07 87.258934,6.3134833 94.553413,16.067361 L95.572182,17.499999 125,17.499999 125,62.499999 95.572182,62.499999 94.553413,63.932635 C87.258934,73.686515 75.61676,79.999999 62.5,79.999999 49.383236,79.999999 37.741068,73.686515 30.446583,63.932635 L29.427815,62.499999 0,62.499999 0,17.499999 29.427815,17.499999 30.446583,16.067361 C37.741068,6.3134833 49.383236,-8.9406956E-07 62.5,1.1368684E-13 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+								Height="80"
+										 Margin="70,735,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+										 Width="125"/>
+				<Path x:Name="B7E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0C828"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,662.5,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+				<Path x:Name="B8E"
+											Data="M62.5,0 C75.616768,0 87.258934,6.3134842 94.553413,16.067362 L95.572189,17.499999 125,17.499999 125,62.5 95.572189,62.5 94.553413,63.932636 C87.258934,73.686516 75.616768,80 62.5,80 49.38324,80 37.74107,73.686516 30.446583,63.932636 L29.427814,62.5 0,62.5 0,17.499999 29.427814,17.499999 30.446583,16.067362 C37.74107,6.3134842 49.38324,0 62.5,0 z" Fill="#FFF0AA50"
+								HorizontalAlignment="Left"
+											 Height="80" Margin="70,590,0,0" Stretch="Fill"
+								VerticalAlignment="Top"
+								Width="125"/>
+
+				<Rectangle HorizontalAlignment="Left"
+											 Height="55"
+											 RadiusX="5"
+											 RadiusY="5"
+											 Margin="47.5,450,0,0"
+											 VerticalAlignment="Top"
+											 Width="170"
+											 Stroke="#DDC83C3C"
+											 StrokeThickness="3"/>
+				<Rectangle x:Name="EBRec"
+													 Fill="#FFDD6666"
+											 HorizontalAlignment="Left"
+											 Height="55"
+											 RadiusX="5"
+											 RadiusY="5"
+											 Margin="47.5,450,0,0"
+											 VerticalAlignment="Top"
+											 Width="170"
+											 Stroke="#FFC83C3C"
+											 StrokeThickness="3"/>
+
+				<Label x:Name="B8L"
+											 Content="8"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,588,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B7L"
+											 Content="7"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,660.5,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B6L"
+											 Content="6"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,733,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B5L"
+											 Content="5"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,805.5,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B4L"
+											 Content="4"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,878,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B3L"
+											 Content="3"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,950.5,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B2L"
+											 Content="2"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,1023,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="B1L"
+											 Content="1"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="80"
+									 Margin="70,1095.5,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="125"
+									 FontFamily="Century Gothic"
+									 FontSize="60"/>
+				<Label x:Name="EBText"
+											 Content="非常"
+									 HorizontalAlignment="Left"
+									 HorizontalContentAlignment="Center"
+									 Height="55"
+									 Margin="47.5,450,0,0"
+									 VerticalAlignment="Top"
+									 VerticalContentAlignment="Center"
+									 Width="170"
+									 FontFamily="MS PGothic"
+									 FontSize="40"/>
+
+				<Label Content="空&#xA;転"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1285,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"
+											 Background="{x:Null}"/>
+				<Label Content="滑&#xA;走"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1385,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"
+											 Background="{x:Null}"/>
+				<Label Content="後&#xA;進"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1485,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"/>
+				<TextBlock Text="&#xA;回&#xA;生&#xA;停&#xA;止"
+											 HorizontalAlignment="Left"
+													 TextAlignment="Center"
+													 LineStackingStrategy="BlockLineHeight"
+													 LineHeight="42"
+											 Height="250"
+											 Margin="1585,20,0,0"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="40"
+													 Foreground="#88FFFFFF"/>
+
+				<Label Content="前"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"/>
+				<Label Content="中"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,105,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"/>
+				<Label Content="後"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,190,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"/>
+
+				<Label Content="ド&#xA;ア"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="260"
+											 Margin="1800,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"
+											 Foreground="#88FFFFFF"/>
+
+
+				<Rectangle x:Name="Accident"
+													 Fill="#FFDD3333"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1185,20,0,0"/>
+				<Rectangle x:Name="Kuten"
+													 Fill="#FF66CCDD"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1285,20,0,0"/>
+				<Rectangle x:Name="Kasso"
+													 Fill="#FF66CCDD"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1385,20,0,0"/>
+				<Rectangle x:Name="Backgo"
+													 Fill="#FFF0AA50"
+											 HorizontalAlignment="Left"
+											 Height="250"
+											 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1485,20,0,0"/>
+				<Rectangle x:Name="Kaisei"
+													 Fill="#FFF0AA50"
+											 HorizontalAlignment="Left"
+											 Height="250"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1585,20,0,0"/>
+
+				<Rectangle x:Name="Forward"
+													 Fill="#FF77FF88"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,20,0,0"/>
+				<Rectangle x:Name="Neutral"
+													 Fill="#FFF0AA50"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,105,0,0"/>
+				<Rectangle x:Name="Back"
+													 Fill="#FFF0AA50"
+											 HorizontalAlignment="Left"
+											 Height="80"
+													 RadiusX="5"
+													 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1685,190,0,0"/>
+
+				<Rectangle x:Name="Door"
+													 Fill="#FFCC8833"
+											 HorizontalAlignment="Left"
+											 Height="260"
+											 RadiusX="5"
+											 RadiusY="5"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 Margin="1800,20,0,0"/>
+
+				<Label x:Name="KutenLab"
+											 Content="空&#xA;転"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1285,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<Label x:Name="KassoLab"
+											 Content="滑&#xA;走"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1385,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<Label x:Name="BackgoLab"
+											 Content="後&#xA;進"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="250"
+											 Margin="1485,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<TextBlock x:Name="KaiseiLab"
+													 Text="&#xA;回&#xA;生&#xA;停&#xA;止"
+											 HorizontalAlignment="Left"
+													 TextAlignment="Center"
+													 LineStackingStrategy="BlockLineHeight"
+													 LineHeight="42"
+											 Height="250"
+											 Margin="1585,20,0,0"
+											 VerticalAlignment="Top"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="40"/>
+
+				<Label x:Name="ForwardLab"
+											 Content="前"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<Label x:Name="NeutralLab"
+											 Content="中"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,105,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<Label x:Name="BackLab"
+											 Content="後"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="80"
+											 Margin="1685,190,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+
+				<Label x:Name="DoorLab"
+											 Content="ド&#xA;ア"
+											 HorizontalAlignment="Left"
+											 HorizontalContentAlignment="Center"
+											 Height="260"
+											 Margin="1800,20,0,0"
+											 VerticalAlignment="Top"
+											 VerticalContentAlignment="Center"
+											 Width="95"
+											 FontFamily="Meiryo"
+											 FontSize="44"/>
+				<Rectangle x:Name="BCover"
+													 Fill="#FF222222"
+													 HorizontalAlignment="Left"
+													 Height="0"
+													 Margin="0,0,0,0"
+													 VerticalAlignment="Bottom"
+													 Width="235"/>
+
+			</Grid>
+			<Button Click="NextP"
+										Content="❏"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Top"
+										Width="60"
+										Height="40"
+										Margin="5,5,0,0"
+										FontFamily="MS Gothic"
+										FontSize="36"
+										BorderBrush="{x:Null}"
+										Background="#FF4466AA"
+										Foreground="White"/>
+			<Rectangle x:Name="Cover"
+											 Fill="Black"/>
+		</Grid>
+	</Viewbox>
+</Page>
