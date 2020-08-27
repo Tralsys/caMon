@@ -10,7 +10,7 @@ BIDS共有メモリが有効化された環境で, caMon.exeを実行するだ�
 Windows10 Pro 64bit + Ryzen 2700のマシンで開発およびデバッグを行ったので, 類似の環境であれば動くはずです.  面倒なんでこれ以上の検証は積極的には行いません.
 
 ## License
-This pproject is under the MIT License.
+This project is under the MIT License.
 
 ## Projects in this repository
 - caMon
