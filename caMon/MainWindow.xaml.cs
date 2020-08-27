@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
@@ -13,26 +14,80 @@ namespace caMon
 	public partial class MainWindow : NavigationWindow
 	{
     SMemLib SML;
-    IPages e233sp_inst = null;
-    IPages e235sp_inst = null;
+
+    /// <summary>ページセレクタのインスタンス.  起動中は不変</summary>
+    readonly ISelector Selector_inst = null;
+
+    IPages __ShowingPage = null;
+    IPages ShowingPage
+		{
+      get => __ShowingPage;
+			set
+			{
+        //NULLは許容されない
+        if (value == null)
+          throw new Exception("Setting the null value is not allowed.");
+
+        //新ページの設定
+        value.BackToHome += OnBackToHome;
+        value.CloseApp += OnCloseAppFired;
+        NavigationService.Navigate(value.FrontPage);
+
+        //旧ページの解放
+				if (__ShowingPage != null)
+				{
+          __ShowingPage.BackToHome -= OnBackToHome;
+          __ShowingPage.CloseApp -= OnCloseAppFired;
+          __ShowingPage.Dispose();
+				}
+
+        __ShowingPage = value;//表示中ページ記録の更新
+			}
+		}
+
 		public MainWindow()
 		{
 			InitializeComponent();
 
       SharedFuncs.SMem_RStart();
 
-      e233sp_inst = new pages.e233sp.caMonIF();
-      e235sp_inst = new pages.e235sp.caMonIF();
+      Selector_inst = new selector.default_.SelectPage();
 
-			e233sp_inst.BackToHome += E233sp_inst_BackToHome;
-			e235sp_inst.BackToHome += E235sp_inst_BackToHome;
+			Selector_inst.PageChangeRequest += Selector_inst_PageChangeRequest;
 
-      NavigationService.Navigate(e233sp_inst.FrontPage);
+      ShowingPage = Selector_inst;
 		}
 
-    private void E235sp_inst_BackToHome(object sender, EventArgs e) => NavigationService.Navigate(e233sp_inst.FrontPage);
+		private void Selector_inst_PageChangeRequest(object sender, PageChangeEventArgs e)
+		{
+      if (e.NewPage != null)
+        ShowingPage = e.NewPage;
+      else if (!string.IsNullOrWhiteSpace(e.ModPath))
+        try
+        {
+          //pathからmodをload
+          ShowingPage = ModLoader.LoadDllInst<IPages>(e.ModPath);
+        }
+        catch (FileNotFoundException fnfe)
+        {
+          MessageBox.Show("指定のmodファイルが見つかりませんでした\n" + fnfe.ToString());
+          return;
+        }
+        catch (EntryPointNotFoundException epnfe)
+        {
+          MessageBox.Show("指定のmodファイルにページ実装が含まれていませんでした\n" + epnfe.ToString());
+        }
+        catch (Exception ex)
+        {
+          MessageBox.Show("不明なエラーが発生しました.\n" + ex.ToString());
+        }
+      else
+        MessageBox.Show("次のページの指定がされていません");
+    }
 
-		private void E233sp_inst_BackToHome(object sender, EventArgs e) => NavigationService.Navigate(e235sp_inst.FrontPage);
+    private void OnCloseAppFired(object sender, EventArgs e) => this.Close();
+
+    private void OnBackToHome(object sender, EventArgs e) => ShowingPage = Selector_inst;
 
     private void MainWindowHeadder_PreviewKeyUp(object sender, KeyEventArgs e)
     {
@@ -50,7 +105,7 @@ namespace caMon
             break;
         }
       }
-      if (e.Key == System.Windows.Input.Key.F12)
+      if (e.Key == Key.F12)
       {
         switch (MainWindowHeadder.WindowStyle)
         {
