@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon_s.ico</ApplicationIcon>
-    <Version>2.1.1</Version>
+    <Version>2.1.1.1</Version>
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
@@ -26,8 +26,6 @@
   <ItemGroup>
     <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
     <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
-    <ProjectReference Include="..\caMon.pages.e233sp\caMon.pages.e233sp.csproj" />
-    <ProjectReference Include="..\caMon.pages.e235sp\caMon.pages.e235sp.csproj" />
     <ProjectReference Include="..\caMon.selector.default\caMon.selector.default.csproj" />
   </ItemGroup>
 
