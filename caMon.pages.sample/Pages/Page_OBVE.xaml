@@ -1,0 +1,70 @@
+﻿<Page x:Class="caMon.pages.sample.Page_OBVE"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:local="clr-namespace:caMon.pages.sample"
+			mc:Ignorable="d" 
+			d:DesignHeight="400" d:DesignWidth="640"
+			FontSize="16"
+			Title="Page_OBVE">
+
+	<Grid Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="2*"/>
+			<ColumnDefinition Width="20"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="2*"/>
+		</Grid.ColumnDefinitions>
+		<Label Content="OBVE Page" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5"/>
+
+		<TextBlock Text="OD_IsEnabled" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding OD_IsEnabled, Mode=OneWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="OD_Version" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding OD_Version, Mode=OneWay}" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" Padding="2"/>
+
+
+		<TextBlock Text="Radius" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding Radius, Mode=OneWay}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="Cant" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding Cant, Mode=OneWay}" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="Pitch" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding Pitch, Mode=OneWay}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="ElapTime" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding ElapTime, Mode=OneWay}" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Left" Padding="2"/>
+
+
+		<TextBlock Text="PreTrain&#xa;_IsEnabled" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding PreTrain_IsEnabled, Mode=OneWay}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="PreTrain&#xa;_Location" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding PreTrain_Location, Mode=OneWay}" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="PreTrain&#xa;_Distance" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding PreTrain_Distance, Mode=OneWay}" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="PreTrain&#xa;_Speed" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding PreTrain_Speed, Mode=OneWay}" Grid.Column="4" Grid.Row="5" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="SelfBCount" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding SelfBCount, Mode=OneWay}" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Padding="2"/>
+
+		<TextBlock Text="SelfBPos" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Right" Padding="2"/>
+		<TextBlock Text="{Binding SelfBPos, Mode=OneWay}" Grid.Column="4" Grid.Row="6" HorizontalAlignment="Left" Padding="2"/>
+
+	</Grid>
+</Page>

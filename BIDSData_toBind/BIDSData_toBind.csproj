@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<Authors>Tetsu Otter</Authors>
+		<Company>Tech Otter</Company>
+		<Product>BIDS Project</Product>
+		<Copyright>Copyright 2020 Tetsu Otter</Copyright>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="IAtsPI">
+			<HintPath>..\bin\ref\IAtsPI.dll</HintPath>
+		</Reference>
+		<Reference Include="TR.BIDSSMemLib.structs">
+			<HintPath>..\bin\ref\TR.BIDSSMemLib.structs.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
