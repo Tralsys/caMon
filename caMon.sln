@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "caMon.selector.default", "c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "caMon.ISelector", "caMon.ISelector\caMon.ISelector.csproj", "{17E993A2-BA0B-454F-9324-C156A9872BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "caMon.pages.sample", "caMon.pages.sample\caMon.pages.sample.csproj", "{13E2972C-9E24-4783-8004-39AB8A3F8C3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "caMon.pages.sample", "caMon.pages.sample\caMon.pages.sample.csproj", "{13E2972C-9E24-4783-8004-39AB8A3F8C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDSData_toBind", "BIDSData_toBind\BIDSData_toBind.csproj", "{E36D52CC-9355-4554-BE13-D5A14C7018B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{13E2972C-9E24-4783-8004-39AB8A3F8C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E2972C-9E24-4783-8004-39AB8A3F8C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E2972C-9E24-4783-8004-39AB8A3F8C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36D52CC-9355-4554-BE13-D5A14C7018B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36D52CC-9355-4554-BE13-D5A14C7018B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36D52CC-9355-4554-BE13-D5A14C7018B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36D52CC-9355-4554-BE13-D5A14C7018B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
