@@ -1,0 +1,122 @@
+﻿<Page x:Class="caMon.pages.sample.samplePage"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:local="clr-namespace:caMon.pages.sample"
+			mc:Ignorable="d" 
+			Title="modサンプル トップページ">
+			<!--タイトルは適当に変更する.  最悪, 無くても大丈夫-->
+			<!--「d:DesignHeight="450" d:DesignWidth="800"」は不要なので削除しておく-->
+
+	<!--Viewbox : 内側の要素を画面いっぱいに表示させる-->
+	<Viewbox>
+
+		<!--Grid	: 要素を自由に配置できる領域のようなもの
+			Height	: 領域の高さ設定  デフォルトの単位は「px」(ピクセル)
+			Width		: 領域の幅設定  デフォルトの単位は「px」(ピクセル)
+		Background:	背景色の設定  カラーコードあるいは色名が使用できる
+		-->
+		<Grid Height="480" Width="640" Background="Black">
+			
+			<!--Grid.RowDefinitions : 現在のGrid要素に対する「一定の高さごとに領域を区切る設定」のグループ.
+			ちなみに, 「一定の幅ごと」の方は「Grid.ColumnDefinitions」である.-->
+			<Grid.RowDefinitions>
+				
+				<!--RowDefinition : 「一定の高さ」の設定.  Heightで設定する「高さ」を指定する-->
+				<RowDefinition Height="50"/>
+				
+				<RowDefinition Height="*"/>
+				<!--
+					「*」は比率による分割を示す.
+					例えば, 「*」と「2*」という2つの設定があった場合, 高さの比は「1:2」となる.
+					確保できる最大の高さを, このグループの中で比率指定されているものすべてで分割する.
+				-->
+				
+				<RowDefinition Height="30"/>
+			</Grid.RowDefinitions>
+
+			<!--Label	: 文字を描画する要素
+				Content	:	描画する文字を指定する設定
+				Margin	:	要素と描画領域との「間の広さ」を指定する設定.  「全方向同じな広さ」, 「左右,上下」, あるいは「左,上,右,下」の順で設定される.
+			HorizonalAlignment: 要素の左右方向位置基準の設定
+			VerticalAlignment	: 要素の上下方向位置基準の設定
+			FontSize	:	文字サイズの設定  単位は「px」
+			Foreground:	文字色の設定  カラーコードあるいは色名が使用できる
+			Grid.Row	:	「Grid.RowDefinitions」のうち, どの番号の領域にこの要素を配置するかの設定.
+			-->
+			<Label Content="caMon Page Mod Sample"
+						 Margin="5,0,0,0"
+						 HorizontalAlignment="Left"
+						 VerticalAlignment="Center"
+						 FontSize="24"
+						 Foreground="White"
+						 Grid.Row="0"/>
+
+			<!--Button	:	ボタンを設置する
+					Content	:	ボタンに表示する内容の設定
+						Click	:	ボタンを押下したときに実行する処理の指定.  同名の関数を同じファイル名を持つcsファイルに用意する.
+					Padding	:	要素の「枠」(ボタンのベース)から「表示する内容(Content)」までの間の広さ.  Marginと同じ設定が可能-->
+			<Button Content="Close"
+							Click="CloseDo"
+							Padding="5,2"
+
+							Margin="5"
+							FontSize="16"
+							HorizontalAlignment="Right"
+							VerticalAlignment="Center"/>
+
+			<!--Frame	:	任意のページ等を表示させる要素
+					Name	:	要素を管理/操作するための任意の名前
+				Source	:	初期状態で表示する要素の設定-->
+			<Frame x:Name="Frame_toShow"
+						 Source="Pages/Page_BSMD.xaml"
+						 
+						 Grid.Row="1"/>
+
+			<!--Gridの内側にGridを配置することも可能-->
+			<Grid Grid.Row="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/><!--BackToHome用-->
+					<ColumnDefinition Width="*"/><!--スペーサー-->
+					<ColumnDefinition Width="*"/><!--BIDS Shared Memory Basic Dataページ用-->
+					<ColumnDefinition Width="*"/><!--Panel Dataページ用-->
+					<ColumnDefinition Width="*"/><!--Sound Dataページ用-->
+					<ColumnDefinition Width="*"/><!--openBVE Dataページ用-->
+					<ColumnDefinition Width="*"/><!--Controllerページ用-->
+				</Grid.ColumnDefinitions>
+
+				<Button Content="← Home"
+								Click="BackToHomeDo"
+								Grid.Column="0"
+								Margin="2"/>
+
+				<Button Content="Basic Data"
+								Click="Page_BSMD_Show"
+								Grid.Column="2"
+								Margin="2"/>
+
+				<Button Content="Panel Data"
+								Click="Page_PanelData_Show"
+								Grid.Column="3"
+								Margin="2"/>
+
+				<Button Content="Sound Data"
+								Click="Page_SoundData_Show"
+								Grid.Column="4"
+								Margin="2"/>
+
+				<Button Content="obve Data"
+								Click="Page_OBVE_Show"
+								Grid.Column="5"
+								Margin="2"/>
+
+				<Button Content="Controller"
+								Click="Page_Ctrler_Show"
+								Grid.Column="6"
+								Margin="2"/>
+
+			</Grid>
+		</Grid>
+	</Viewbox>
+</Page>
