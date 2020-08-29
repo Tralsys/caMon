@@ -8,7 +8,49 @@
 			d:DesignHeight="450" d:DesignWidth="800"
 			Title="Page_SoundData">
 
-	<Grid>
-		<Label Content="Sound Data Page" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
+	<Grid Height="400" Width="640" Background="White">
+		<Label Content="Sound Data Page" Background="White" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="4" FontSize="20"/>
+
+		<Grid x:Name="ArrayDataShowGrid" Margin="0,40,0,0" Background="WhiteSmoke" ShowGridLines="True">
+			<!--17x17のtable-->
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+		</Grid>
 	</Grid>
 </Page>
