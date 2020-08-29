@@ -81,8 +81,11 @@ namespace BIDSData_toBind
 		public int brake { get => BrakeNPos; }
 
 		public double hour { get => (double)min / 60; }
+		public int hour_digi { get => (int)hour % 24; }
 		public double min { get => (double)sec / 60; }
+		public int min_digi { get => (int)min % 60; }
 		public int sec { get => Time / 1000; }
+		public int sec_digi { get => sec % 60; }
 		#endregion
 
 		BIDSSharedMemoryData __BSMD = new BIDSSharedMemoryData();
@@ -159,6 +162,9 @@ namespace BIDSData_toBind
 					OnPropertyChanged(nameof(hour));
 					OnPropertyChanged(nameof(min));
 					OnPropertyChanged(nameof(sec));
+					OnPropertyChanged(nameof(hour_digi));
+					OnPropertyChanged(nameof(min_digi));
+					OnPropertyChanged(nameof(sec_digi));
 				}
 
 				if (BCPres != value.StateData.BC)
