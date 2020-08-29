@@ -9,6 +9,6 @@
 			Title="Page_Ctrler">
 
 	<Grid>
-		<Label Content="Controller Page" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
+		<Label Content="Controller Page&#xa;………準備中………" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
 	</Grid>
 </Page>
