@@ -14,7 +14,7 @@ namespace caMon
 			SML = new SMemLib();
 		}
 
-		static public void SMem_RStart() => SML.ReadStart(5);//BSMDだけ
+		static public void SMem_RStart() => SML.ReadStart();
 		static public void SMem_RStop() => SML.ReadStop();
 	}
 }
