@@ -6,24 +6,27 @@
 		<Authors>Tetsu Otter</Authors>
 		<Company>Tech Otter</Company>
 		<Product>BIDS Project</Product>
-		<Copyright>Copyright 2020 Tetsu Otter</Copyright>
+		<Copyright>Copyright (C) 2020 Tetsu Otter</Copyright>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReleaseNotes># 1.0.0
+released</PackageReleaseNotes>
+		<Description>This is a library for using BIDS data with Binding.</Description>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<Reference Include="IAtsPI">
-			<HintPath>..\bin\ref\IAtsPI.dll</HintPath>
-		</Reference>
-		<Reference Include="TR.BIDSSMemLib.structs">
-			<HintPath>..\bin\ref\TR.BIDSSMemLib.structs.dll</HintPath>
-		</Reference>
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\LICENSE">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="TR.BIDSSMemLib.structs" Version="1.0.0" />
 	</ItemGroup>
 
 </Project>

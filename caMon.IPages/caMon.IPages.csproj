@@ -7,18 +7,26 @@
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
 		<Version>1.0.0.1</Version>
-    <Copyright>Copyright 2020 Tetsu Otter</Copyright>
+    <Copyright>Copyright (C) 2020 Tetsu Otter</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes># 1.0.0.1
+Fixed a bug that non-BSMD data updates not to be notified.
+
+# 1.0.0.0
+released</PackageReleaseNotes>
+    <Description>This library contains the definition of the interface that the caMon page add-on module should have.</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="PresentationFramework">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="TR.BIDSSMemLib.rw">
-      <HintPath>..\bin\ref\TR.BIDSSMemLib.rw.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -27,6 +35,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TR.BIDSSMemLib.rw" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
