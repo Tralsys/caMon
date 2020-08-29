@@ -24,27 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
-    <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
-    <ProjectReference Include="..\caMon.selector.default\caMon.selector.default.csproj" />
+    <PackageReference Include="TR.BIDSSMemLib.rw" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="IAtsPI">
-      <HintPath>..\bin\ref\IAtsPI.dll</HintPath>
-    </Reference>
-    <Reference Include="TR.BIDSSMemLib.rw">
-      <HintPath>..\bin\ref\TR.BIDSSMemLib.rw.dll</HintPath>
-    </Reference>
-    <Reference Include="TR.BIDSSMemLib.structs">
-      <HintPath>..\bin\ref\TR.BIDSSMemLib.structs.dll</HintPath>
-    </Reference>
-    <Reference Include="TR.SMemCtrler">
-      <HintPath>..\bin\ref\TR.SMemCtrler.dll</HintPath>
-    </Reference>
-    <Reference Include="TR.SMemIF">
-      <HintPath>..\bin\ref\TR.SMemIF.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
+    <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
+    <ProjectReference Include="..\caMon.selector.default\caMon.selector.default.csproj" />
   </ItemGroup>
 
   <ItemGroup>
