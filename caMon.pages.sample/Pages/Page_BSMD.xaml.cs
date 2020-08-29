@@ -7,9 +7,13 @@ namespace caMon.pages.sample
 	/// </summary>
 	public partial class Page_BSMD : Page
 	{
+
+		BIDSData_toBind.BSMD_toBind bsmd2b = new BIDSData_toBind.BSMD_toBind();
 		public Page_BSMD()
 		{
 			InitializeComponent();
+
+			DataContext = bsmd2b;//Binding用
 
 			SharedFuncs.SML.SMC_BSMDChanged += SML_SMC_BSMDChanged;//BIDS Shared Memory Basic Dataが更新された際に実行される処理を登録する
 		}
@@ -26,6 +30,8 @@ namespace caMon.pages.sample
 			float Speed_Old = e.OldValue.StateData.V;
 
 			//上記二つに特に意味があるわけではない.
+
+			bsmd2b.BSMD = e.NewValue;//表示データの更新
 		}
 	}
 }

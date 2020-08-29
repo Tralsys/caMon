@@ -5,11 +5,153 @@
 			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			xmlns:local="clr-namespace:caMon.pages.sample"
 			mc:Ignorable="d" 
-			d:DesignHeight="450"
-			d:DesignWidth="800"
+			d:DesignHeight="400"
+			d:DesignWidth="640"
 			Title="Page_BSMD">
 
-	<Grid>
-		<Label Content="BSMD Page" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
+	<Grid x:Name="TopGrid" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="2*"/>
+			<ColumnDefinition Width="10"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="2*"/>
+		</Grid.ColumnDefinitions>
+
+		<Label Content="BSMD Page" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5,2" Grid.Row="0" Grid.Column="0" FontSize="18"/>
+
+		<TextBlock Text="BIDS_IsEnabled" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="1" Grid.Column="0"/>
+		<TextBlock Text="{Binding BIDS_IsEnabled, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="1" Grid.Column="1"/>
+
+		<TextBlock Text="BIDS_Version" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="1" Grid.Column="3"/>
+		<TextBlock Text="{Binding BIDS_Version, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="1" Grid.Column="4"/>
+
+		
+		<TextBlock Text="BrakeNCount" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="2" Grid.Column="0"/>
+		<TextBlock Text="{Binding BrakeNCount, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="2" Grid.Column="1"/>
+
+		<TextBlock Text="PowerNCount" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="2" Grid.Column="3"/>
+		<TextBlock Text="{Binding PowerNCount, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="2" Grid.Column="4"/>
+
+		<TextBlock Text="ATSCheckPos" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="3" Grid.Column="0"/>
+		<TextBlock Text="{Binding ATSCheckPos, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="3" Grid.Column="1"/>
+
+		<TextBlock Text="B67Pos" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="3" Grid.Column="3"/>
+		<TextBlock Text="{Binding B67Pos, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="3" Grid.Column="4"/>
+
+		<TextBlock Text="CarCount" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="4" Grid.Column="0"/>
+		<TextBlock Text="{Binding CarCount, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="4" Grid.Column="1"/>
+
+
+		<TextBlock Text="MyLocation" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="5" Grid.Column="0"/>
+		<TextBlock Text="{Binding MyLocation, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="5" Grid.Column="1"/>
+
+		<TextBlock Text="MySpeed" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="5" Grid.Column="3"/>
+		<TextBlock Text="{Binding MySpeed, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="5" Grid.Column="4"/>
+
+		<TextBlock Text="Time" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="6" Grid.Column="0"/>
+		<TextBlock Text="{Binding Time, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="6" Grid.Column="1"/>
+
+		<TextBlock Text="hh:mm:ss" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="6" Grid.Column="3"/>
+		<TextBlock HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="6" Grid.Column="4">
+			<Run Text="{Binding hour_digi, Mode=OneWay}"/>
+			<Run Text=":"/>
+			<Run Text="{Binding min_digi, Mode=OneWay}"/>
+			<Run Text=":"/>
+			<Run Text="{Binding sec_digi, Mode=OneWay}"/>
+		</TextBlock>
+
+		<TextBlock Text="BCPres" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="7" Grid.Column="0"/>
+		<TextBlock Text="{Binding BCPres, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="7" Grid.Column="1"/>
+
+		<TextBlock Text="MRPres" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="7" Grid.Column="3"/>
+		<TextBlock Text="{Binding MRPres, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="7" Grid.Column="4"/>
+
+		<TextBlock Text="ERPres" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="8" Grid.Column="0"/>
+		<TextBlock Text="{Binding ERPres, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="8" Grid.Column="1"/>
+
+		<TextBlock Text="BPPres" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="8" Grid.Column="3"/>
+		<TextBlock Text="{Binding BPPres, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="8" Grid.Column="4"/>
+
+		<TextBlock Text="SAPPres" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="9" Grid.Column="0"/>
+		<TextBlock Text="{Binding SAPPres, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="9" Grid.Column="1"/>
+
+		<TextBlock Text="Current" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="9" Grid.Column="3"/>
+		<TextBlock Text="{Binding Current, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="9" Grid.Column="4"/>
+
+		
+		<TextBlock Text="BrakeNPos" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="10" Grid.Column="0"/>
+		<TextBlock Text="{Binding BrakeNPos, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="10" Grid.Column="1"/>
+
+		<TextBlock Text="PowerNPos" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="10" Grid.Column="3"/>
+		<TextBlock Text="{Binding PowerNPos, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="10" Grid.Column="4"/>
+
+		<TextBlock Text="ReverserPos" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="11" Grid.Column="0"/>
+		<TextBlock Text="{Binding ReverserPos, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="11" Grid.Column="1"/>
+
+		<TextBlock Text="ConstSPD" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="11" Grid.Column="3"/>
+		<TextBlock Text="{Binding ConstSPD, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="11" Grid.Column="4"/>
+
+		<TextBlock Text="IsDoorClosed" HorizontalAlignment="Right" Padding="3"
+							 Grid.Row="12" Grid.Column="0"/>
+		<TextBlock Text="{Binding IsDoorClosed, Mode=OneWay}" HorizontalAlignment="Left" Padding="3"
+							 Grid.Row="12" Grid.Column="1"/>
 	</Grid>
 </Page>
