@@ -12,6 +12,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\BIDSData_toBind\BIDSData_toBind.csproj" />
 		<ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
 	</ItemGroup>
 
