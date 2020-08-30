@@ -106,9 +106,17 @@ namespace caMon
 				MessageBox.Show("次のページの指定がされていません");
 		}
 
-		private void OnCloseAppFired(object sender, EventArgs e) => this.Close();
+		private void OnCloseAppFired(object sender, EventArgs e)
+		{
+			if (CLA.CloseFunctionEnabled)
+				this.Close();
+		}
 
-		private void OnBackToHome(object sender, EventArgs e) => ShowingPage = Selector_inst;
+		private void OnBackToHome(object sender, EventArgs e)
+		{
+			if (CLA.BackFunctionEnabled)
+				ShowingPage = Selector_inst;
+		}
 
 		private void MainWindowHeadder_PreviewKeyUp(object sender, KeyEventArgs e)
 		{

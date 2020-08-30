@@ -23,6 +23,9 @@ namespace caMon
 			public bool F11Enabled = true;
 			public bool F12Enabled = true;
 
+			public bool CloseFunctionEnabled = true;
+			public bool BackFunctionEnabled = true;
+
 			public int Height = 400;
 			public int Width = 600;
 			public int Left = 20;
@@ -206,6 +209,36 @@ namespace caMon
 							catch (Exception e)
 							{
 								Console.WriteLine("F12Enabled CAOption : {0}", e);
+							}
+							break;
+
+						case "/cfe":
+						case "/closefunc":
+						case "/closefunction":
+						case "/closefunctionenabled":
+							try
+							{
+								cla.CloseFunctionEnabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
+								i++;
+							}
+							catch (Exception e)
+							{
+								Console.WriteLine("CloseFunctionEnabled CAOption : {0}", e);
+							}
+							break;
+
+						case "/bfe":
+						case "/backfunc":
+						case "/backfunction":
+						case "/backfunctionenabled":
+							try
+							{
+								cla.BackFunctionEnabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
+								i++;
+							}
+							catch (Exception e)
+							{
+								Console.WriteLine("BackFunctionEnabled CAOption : {0}", e);
 							}
 							break;
 
