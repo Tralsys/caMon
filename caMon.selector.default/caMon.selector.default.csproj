@@ -10,6 +10,7 @@
 		<Copyright>Copyright 2020 Tetsu Otter</Copyright>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RootNamespace>caMon.selector.default_</RootNamespace>
+		<Version>1.0.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
