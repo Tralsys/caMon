@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "caMon.pages.e235sp": {
+      "commandName": "Executable",
+      "executablePath": "$(ProjectDir)..\\publish\\RuntimeNotIncludedPack\\caMon.exe",
+      "commandLineArgs": "$(TargetFileName)"
+    }
+  }
+}
