@@ -16,12 +16,9 @@ namespace caMon.selector.default_
 	{
 		string SelectedPath = string.Empty;
 
-		public SelectPage()
-		{
-			InitializeComponent();
-
-			ModsList_ListView_SetUp();
-		}
+		public SelectPage() => InitializeComponent();
+		
+		private void Page_Loaded(object sender, RoutedEventArgs e) => ModsList_ListView_SetUp();//初期化されても表示されない可能性があるため
 
 		void ModsList_ListView_SetUp()
 		{

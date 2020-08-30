@@ -6,14 +6,10 @@
 				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 				mc:Ignorable="d"
 				Title="caMon"
-				Topmost="True"
-				WindowState="Normal"
-				WindowStyle="SingleBorderWindow"
-				Height="480"
-				Width="800"
 				AllowsTransparency="False"
 									ShowsNavigationUI="False"
 									Background="Black"
+									Loaded="MainWindowHeadder_Loaded"
 				PreviewKeyUp="MainWindowHeadder_PreviewKeyUp"
 									Closing="MainWindowHeadder_Closing"/>
 

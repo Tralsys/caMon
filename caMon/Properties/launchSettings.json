@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "caMon": {
+      "commandName": "Project",
+      "commandLineArgs": "/tm f"
+    }
+  }
+}

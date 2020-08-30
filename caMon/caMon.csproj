@@ -5,14 +5,28 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon_s.ico</ApplicationIcon>
-    <Version>2.1.1.1</Version>
+    <Version>2.1.2.0</Version>
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
     <Copyright>Copyright 2020 Tetsu Otter</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>2.1.1.1</AssemblyVersion>
-    <FileVersion>2.1.1.1</FileVersion>
+    <AssemblyVersion>2.1.2.0</AssemblyVersion>
+    <FileVersion>2.1.2.0</FileVersion>
+    <PackageReleaseNotes># 2.1.2.0
+Add CommandLineArgs Support
+
+# 2.1.1.1
+fix packaging settings
+
+# 2.1.1.0
+Add Page Selector support
+
+# 2.1.0
+- Support BIDS v202
+- Extract and separate the Pages implementation.</PackageReleaseNotes>
+    <Description>It's a piece of cake Monitor! :)
+WPFで作成されたページを表示します.</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BIDSData_toBind\BIDSData_toBind.csproj" />
     <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
     <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
     <ProjectReference Include="..\caMon.selector.default\caMon.selector.default.csproj" />

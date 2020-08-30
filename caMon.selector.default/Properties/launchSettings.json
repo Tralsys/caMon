@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "caMon.selector.default": {
+      "commandName": "Executable",
+      "executablePath": "$(ProjectDir)..\\publish\\RuntimeNotIncludedPack\\caMon.exe",
+      "commandLineArgs": "$(TargetFileName)"
+    }
+  }
+}

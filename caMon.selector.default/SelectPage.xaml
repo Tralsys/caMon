@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			mc:Ignorable="d" 
+			Loaded="Page_Loaded"
       Title="SelectPage">
 	<Viewbox>
 		<Grid Background="Black" Height="480" Width="640">
