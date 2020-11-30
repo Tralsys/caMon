@@ -30,22 +30,23 @@ namespace caMon.selector.default_
 			if (ModsList_ListView_Setup_Init_Done)//実行済みならやらなくてOK
 				return;
 
+			ModsList_ListView_Setup_Init_Done = true;
+
 			//ディレクトリが存在しないなら作る
 			if (!Directory.Exists(MODS_DIRECTORY_ALT_PATH))
 			{
-				if (MessageBox.Show("modsフォルダが見つかりませんでした.  新規に作成しますか?\n作成するDirectoryのFullpath:" + MODS_DIRECTORY_ALT_PATH, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+				if (MessageBox.Show("modsフォルダが見つかりませんでした.  新規に作成しますか?\n作成するDirectoryのFullpath : " + MODS_DIRECTORY_ALT_PATH, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
 					Directory.CreateDirectory(MODS_DIRECTORY_ALT_PATH);
 
 				//作成するしないに関わらずフォルダ選択は使用する
 				ChooseCustomDirectory(null, null);
 			}
 
-			ModsList_ListView_Setup_Init_Done = true;
 		}
-		
+
 		bool CheckChooseOtherDirectory()
 		{
-			if (MessageBox.Show("指定されたフォルダに, 使用可能なファイルが見当たりませんでした.  別のフォルダを選択しますか?\nCurrentSearchingLocation:" + using_mods_directory, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+			if (MessageBox.Show("指定されたフォルダに, 使用可能なファイルが見当たりませんでした.  別のフォルダを選択しますか?\nCurrentSearchingLocation : " + using_mods_directory, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
 				return ChooseCustomDirectory() && ModsList_ListView_SetUp();
 
 			return false;//デフォルトは失敗
