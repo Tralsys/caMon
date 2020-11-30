@@ -2,31 +2,23 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon_s.ico</ApplicationIcon>
-    <Version>2.1.2.0</Version>
+    <Version>2.1.2.1</Version>
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
     <Copyright>Copyright 2020 Tetsu Otter</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>2.1.2.0</AssemblyVersion>
-    <FileVersion>2.1.2.0</FileVersion>
-    <PackageReleaseNotes># 2.1.2.0
-Add CommandLineArgs Support
-
-# 2.1.1.1
-fix packaging settings
-
-# 2.1.1.0
-Add Page Selector support
-
-# 2.1.0
-- Support BIDS v202
-- Extract and separate the Pages implementation.</PackageReleaseNotes>
+    <AssemblyVersion>2.1.2.1</AssemblyVersion>
+    <FileVersion>2.1.2.1</FileVersion>
+    <PackageReleaseNotes>https://github.com/TetsuOtter/caMon/blob/master/caMon/releasenote.md</PackageReleaseNotes>
     <Description>It's a piece of cake Monitor! :)
-WPFで作成されたページを表示します.</Description>
+WPFで作成されたページを表示します</Description>
+    <RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
