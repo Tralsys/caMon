@@ -46,21 +46,39 @@
 			</Grid>
 			
 			<!--Row = 2-->
-			<Button Click="BackBtn_Click"
-							Content="Back"
-							Margin="5"
-							Padding="5"
-							Width="60"
-							HorizontalAlignment="Left"
-							Grid.Row="2"/>
 
 			<Button Click="LoadBtn_Click"
 							Content="Load the selected mod"
 							Margin="5"
 							Padding="5"
-							Width="300"
+							Width="200"
 							HorizontalAlignment="Center"
 							Grid.Row="2"/>
+
+			<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Horizontal">
+				<Button Click="BackBtn_Click"
+							Content="Back"
+							Margin="5"
+							Padding="5"
+							Width="60"/>
+				<Button Click="ChooseCustomDirectory"
+							Content="Open Directory"
+							Margin="10,5"
+							Padding="5"/>
+			</StackPanel>
+			<StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+				<Button Click="OpenCustomFile"
+							Content="Open File"
+							Margin="10,5"
+							Padding="5"/>
+				<Button Click="ReloadList"
+							Content="Reload"
+							Margin="10,5"
+							Padding="5"
+							HorizontalAlignment="Right"
+							Grid.Row="2"/>
+			</StackPanel>
+
 		</Grid>
 	</Viewbox>
 </Page>

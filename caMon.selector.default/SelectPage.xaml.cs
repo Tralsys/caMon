@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace caMon.selector.default_
 {
@@ -19,24 +22,54 @@ namespace caMon.selector.default_
 		public SelectPage() => InitializeComponent();
 		
 		private void Page_Loaded(object sender, RoutedEventArgs e) => ModsList_ListView_SetUp();//初期化されても表示されない可能性があるため
-
-		void ModsList_ListView_SetUp()
+		static readonly string MODS_DIRECTORY_ALT_PATH = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location), "mods");
+		string using_mods_directory = MODS_DIRECTORY_ALT_PATH;
+		bool ModsList_ListView_Setup_Init_Done = false;
+		void ModsList_ListView_Setup_Init()
 		{
-			//ListViewの初期化
-			ModsList_ListView.Items.Clear();
+			if (ModsList_ListView_Setup_Init_Done)//実行済みならやらなくてOK
+				return;
 
-			//ディレクトリが存在しないなら作る.
-			Directory.CreateDirectory(@"mods");
+			ModsList_ListView_Setup_Init_Done = true;
 
+			//ディレクトリが存在しないなら作る
+			if (!Directory.Exists(MODS_DIRECTORY_ALT_PATH))
+			{
+				if (MessageBox.Show("modsフォルダが見つかりませんでした.  新規に作成しますか?\n作成するDirectoryのFullpath : " + MODS_DIRECTORY_ALT_PATH, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+					Directory.CreateDirectory(MODS_DIRECTORY_ALT_PATH);
+
+				//作成するしないに関わらずフォルダ選択は使用する
+				ChooseCustomDirectory(null, null);
+			}
+
+		}
+
+		bool CheckChooseOtherDirectory()
+		{
+			if (MessageBox.Show("指定されたフォルダに, 使用可能なファイルが見当たりませんでした.  別のフォルダを選択しますか?\nCurrentSearchingLocation : " + using_mods_directory, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+				return ChooseCustomDirectory() && ModsList_ListView_SetUp();
+
+			return false;//デフォルトは失敗
+
+		}
+
+		bool ModsList_ListView_SetUp()
+		{
+			ModsList_ListView_Setup_Init();
 
 			//ref : https://dobon.net/vb/dotnet/file/getfiles.html
-			var items = Directory.GetFiles(@"mods\", "*.dll", SearchOption.TopDirectoryOnly);
-
-			if(items.Length<=0)
+			string[] items = null;
+			try
 			{
-				Task.Run(() => MessageBox.Show("modがmodsフォルダに見当たりませんでした."));//ウィンドウは確実に表示する.
-				return;
+				items = Directory.GetFiles(using_mods_directory + Path.DirectorySeparatorChar, "*.dll", SearchOption.TopDirectoryOnly);
+			}catch(Exception e)
+			{
+				MessageBox.Show("ファイルリスト取得に失敗しました.\n" + e.Message, "caMon.selector.default");
+				return false;
 			}
+
+			if (items.Length <= 0)
+				return CheckChooseOtherDirectory();
 
 			//ref : https://dobon.net/vb/dotnet/file/fileversion.html
 			//ref : https://qiita.com/Kosen-amai/items/def339ea71cc69eeb9d0
@@ -50,12 +83,27 @@ namespace caMon.selector.default_
 
 			ModsList_ListView.DataContext = fvil;
 
-			if (fvil.Count > 0)
-				ModsList_ListView.SelectedIndex = 0;
-			else
-				Task.Run(() => MessageBox.Show("modがmodsフォルダに見当たりませんでした."));//ウィンドウは確実に表示する.
-		}
+			if (fvil.Count <= 0)
+				return CheckChooseOtherDirectory();
 
+			ModsList_ListView.SelectedIndex = 0;
+			return true;
+		}
+		private bool ChooseCustomDirectory()
+		{
+			//ref : https://johobase.com/wpf-file-folder-common-dialog/
+			var dig = new CommonOpenFileDialog();
+			dig.IsFolderPicker = true;
+
+			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
+			{
+				using_mods_directory = dig.FileName;
+				return ModsList_ListView_SetUp();
+			}
+
+			return false;
+		}
+		private void ChooseCustomDirectory(object sender, RoutedEventArgs e) => ChooseCustomDirectory();
 
 		/*ISelectorの実装*/
 
@@ -84,6 +132,25 @@ namespace caMon.selector.default_
 			}
 
 			PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { ModPath = SelectedPath });
+		}
+
+		private void ReloadList(object sender, RoutedEventArgs e) => ModsList_ListView_SetUp();
+
+		private void OpenCustomFile(object sender, RoutedEventArgs e)
+		{
+			//ref : https://johobase.com/wpf-file-folder-common-dialog/
+			var dig = new CommonOpenFileDialog();
+			dig.Filters.Add(new CommonFileDialogFilter("*.dll", "*.dll"));
+			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
+			{
+				try
+				{
+					PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { ModPath = dig.FileName });
+				}catch(Exception ex)
+				{
+					MessageBox.Show("DLLの読み込みに失敗しました.\n" + ex.ToString(), "caMon.selector.default");
+				}
+			}
 		}
 	}
 }
