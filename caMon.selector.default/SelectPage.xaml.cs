@@ -134,5 +134,22 @@ namespace caMon.selector.default_
 		}
 
 		private void ReloadList(object sender, RoutedEventArgs e) => ModsList_ListView_SetUp();
+
+		private void OpenCustomFile(object sender, RoutedEventArgs e)
+		{
+			//ref : https://johobase.com/wpf-file-folder-common-dialog/
+			var dig = new CommonOpenFileDialog();
+			dig.Filters.Add(new CommonFileDialogFilter("*.dll", "*.dll"));
+			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
+			{
+				try
+				{
+					PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { ModPath = dig.FileName });
+				}catch(Exception ex)
+				{
+					MessageBox.Show("DLLの読み込みに失敗しました.\n" + ex.ToString(), "caMon.selector.default");
+				}
+			}
+		}
 	}
 }
