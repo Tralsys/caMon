@@ -9,7 +9,7 @@
 				AllowsTransparency="False"
 									ShowsNavigationUI="False"
 									Background="Black"
-									Loaded="MainWindowHeadder_Loaded"
+									Initialized="MainWindowHeadder_Initialized"
 				PreviewKeyUp="MainWindowHeadder_PreviewKeyUp"
 									Closing="MainWindowHeadder_Closing"/>
 

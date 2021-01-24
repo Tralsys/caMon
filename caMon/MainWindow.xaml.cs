@@ -68,11 +68,11 @@ namespace caMon
 
 		public MainWindow()
 		{
-			InitializeComponent();
-
 			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
 
-			CLA = CheckCLArgs();
+			CLA = CheckCLArgs();//UI要素を表示させる前に引数チェック
+
+			InitializeComponent();
 
 			if (CLA.NotBlickBVE && !string.IsNullOrWhiteSpace(CLA.BveExeFileName) && !string.IsNullOrWhiteSpace(CLA.BveProcessName))
 			{
@@ -83,6 +83,10 @@ namespace caMon
 			Selector_inst = CLA.selector_toRet ?? new selector.default_.SelectPage();//コマンドライン引数でセレクタが設定されてれば, それを使用する.
 
 			Selector_inst.PageChangeRequest += Selector_inst_PageChangeRequest;
+
+			//初期ページはセレクタ画面
+			//表示するページの登録(イベント他)
+			ShowingPage = CLA.page_toShow ?? Selector_inst;
 		}
 
 		private void SetBveWindowToFront()
@@ -94,7 +98,7 @@ namespace caMon
 		}
 
 
-		private void MainWindowHeadder_Loaded(object sender, RoutedEventArgs e)
+		private void ApplyCLArgs()
 		{
 			//ウィンドウの各種プロパティをセット
 			Height = CLA.Height;
@@ -111,11 +115,6 @@ namespace caMon
 
 			WindowState = CLA.WindowState;
 			WindowStyle = CLA.WindowStyle;
-
-
-			//初期ページはセレクタ画面
-			//表示するページの登録(イベント他)
-			ShowingPage = CLA.page_toShow ?? Selector_inst;
 		}
 
 		private void Selector_inst_PageChangeRequest(object sender, PageChangeEventArgs e)
@@ -191,5 +190,7 @@ namespace caMon
 		{
 			SharedFuncs.SMem_RStop();
 		}
+
+		private void MainWindowHeadder_Initialized(object sender, EventArgs e) => ApplyCLArgs();
 	}
 }
