@@ -68,11 +68,11 @@ namespace caMon
 
 		public MainWindow()
 		{
-			InitializeComponent();
-
 			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
 
-			CLA = CheckCLArgs();
+			CLA = CheckCLArgs();//UI要素を表示させる前に引数チェック
+
+			InitializeComponent();
 
 			if (CLA.NotBlickBVE && !string.IsNullOrWhiteSpace(CLA.BveExeFileName) && !string.IsNullOrWhiteSpace(CLA.BveProcessName))
 			{
@@ -83,6 +83,10 @@ namespace caMon
 			Selector_inst = CLA.selector_toRet ?? new selector.default_.SelectPage();//コマンドライン引数でセレクタが設定されてれば, それを使用する.
 
 			Selector_inst.PageChangeRequest += Selector_inst_PageChangeRequest;
+
+			//初期ページはセレクタ画面
+			//表示するページの登録(イベント他)
+			ShowingPage = CLA.page_toShow ?? Selector_inst;
 		}
 
 		private void SetBveWindowToFront()
@@ -94,72 +98,70 @@ namespace caMon
 		}
 
 
-		private void MainWindowHeadder_Loaded(object sender, RoutedEventArgs e)
+		private void ApplyCLArgs()
 		{
 			//ウィンドウの各種プロパティをセット
-			Height = CLA.Height;
-			Width = CLA.Width;
+			Height = CLA.Height ?? Height;
+			Width = CLA.Width ?? Width;
 
-			Left = CLA.Left;
-			Top = CLA.Top;
+			Left = CLA.Left ?? Left;
+			Top = CLA.Top ?? Top;
 
-			Topmost = CLA.Topmost;
-			ShowInTaskbar = CLA.ShowInTaskbar;
+			Topmost = CLA.Topmost ?? Topmost;
+			ShowInTaskbar = CLA.ShowInTaskbar ?? ShowInTaskbar;
 
-			WindowStartupLocation = CLA.WindowStartupLocation;
-			ResizeMode = CLA.ResizeMode;
+			WindowStartupLocation = CLA.WindowStartupLocation ?? WindowStartupLocation;
+			ResizeMode = CLA.ResizeMode ?? ResizeMode;
 
-			WindowState = CLA.WindowState;
-			WindowStyle = CLA.WindowStyle;
-
-
-			//初期ページはセレクタ画面
-			//表示するページの登録(イベント他)
-			ShowingPage = CLA.page_toShow ?? Selector_inst;
+			WindowState = CLA.WindowState ?? WindowState;
+			WindowStyle = CLA.WindowStyle ?? WindowStyle;
 		}
 
-		private void Selector_inst_PageChangeRequest(object sender, PageChangeEventArgs e)
+		private void Selector_inst_PageChangeRequest(object? sender, PageChangeEventArgs? e)
 		{
-			if (e.NewPage != null)
-				ShowingPage = e.NewPage;
-			else if (!string.IsNullOrWhiteSpace(e.ModPath))
-				try
-				{
-					//pathからmodをload
-					ShowingPage = ModLoader.LoadDllInst<IPages>(e.ModPath);
-				}
-				catch (FileNotFoundException fnfe)
-				{
-					MessageBox.Show("指定のmodファイルが見つかりませんでした\n" + fnfe.ToString());
-					return;
-				}
-				catch (EntryPointNotFoundException epnfe)
-				{
-					MessageBox.Show("指定のmodファイルにページ実装が含まれていませんでした\n" + epnfe.ToString());
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("不明なエラーが発生しました.\n" + ex.ToString());
-				}
-			else
-				MessageBox.Show("次のページの指定がされていません");
+			if(e is not null)
+			{
+				if(e.NewPage is not null)
+					ShowingPage = e.NewPage;
+				else if (!string.IsNullOrWhiteSpace(e.ModPath))
+					try
+					{
+						//pathからmodをload
+						ShowingPage = ModLoader.LoadDllInst<IPages>(e.ModPath);
+					}
+					catch (FileNotFoundException fnfe)
+					{
+						MessageBox.Show("指定のmodファイルが見つかりませんでした\n" + fnfe.ToString());
+					}
+					catch (EntryPointNotFoundException epnfe)
+					{
+						MessageBox.Show("指定のmodファイルにページ実装が含まれていませんでした\n" + epnfe.ToString());
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show("不明なエラーが発生しました.\n" + ex.ToString());
+					}
+				else
+					MessageBox.Show("次のページの指定がされていません");
+			}
+
 		}
 
 		private void OnCloseAppFired(object sender, EventArgs e)
 		{
-			if (CLA.CloseFunctionEnabled)
+			if (CLA.CloseFunctionEnabled == true)
 				this.Close();
 		}
 
 		private void OnBackToHome(object sender, EventArgs e)
 		{
-			if (CLA.BackFunctionEnabled)
+			if (CLA.BackFunctionEnabled == true)
 				ShowingPage = Selector_inst;
 		}
 
 		private void MainWindowHeadder_PreviewKeyUp(object sender, KeyEventArgs e)
 		{
-			if (CLA.F11Enabled && e.Key == Key.F11)
+			if (CLA.F11Enabled == true && e.Key == Key.F11)
 			{
 				switch (MainWindowHeadder.WindowState)
 				{
@@ -173,7 +175,7 @@ namespace caMon
 						break;
 				}
 			}
-			if (CLA.F11Enabled && e.Key == Key.F12)
+			if (CLA.F11Enabled == true && e.Key == Key.F12)
 			{
 				switch (MainWindowHeadder.WindowStyle)
 				{
@@ -191,5 +193,7 @@ namespace caMon
 		{
 			SharedFuncs.SMem_RStop();
 		}
+
+		private void MainWindowHeadder_Initialized(object sender, EventArgs e) => ApplyCLArgs();
 	}
 }

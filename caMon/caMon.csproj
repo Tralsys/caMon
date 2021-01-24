@@ -19,6 +19,7 @@ WPFで作成されたページを表示します</Description>
     <RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

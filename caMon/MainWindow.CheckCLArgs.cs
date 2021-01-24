@@ -9,31 +9,31 @@ namespace caMon
 	{
 		private class CLArgs
 		{
-			public ISelector selector_toRet = null;
-			public IPages page_toShow = null;
+			public ISelector? selector_toRet = null;
+			public IPages? page_toShow = null;
 
-			public WindowState WindowState = WindowState.Normal;
-			public WindowStyle WindowStyle = WindowStyle.SingleBorderWindow;
-			public WindowStartupLocation WindowStartupLocation = WindowStartupLocation.Manual;
-			public ResizeMode ResizeMode = ResizeMode.CanResize;
+			public WindowState? WindowState = null;
+			public WindowStyle? WindowStyle = null;
+			public WindowStartupLocation? WindowStartupLocation = null;
+			public ResizeMode? ResizeMode = null;
 
-			public bool Topmost = false;
-			public bool ShowInTaskbar = true;
+			public bool? Topmost = null;
+			public bool? ShowInTaskbar = null;
 
-			public bool F11Enabled = true;
-			public bool F12Enabled = true;
+			public bool? F11Enabled = true;
+			public bool? F12Enabled = true;
 
-			public bool CloseFunctionEnabled = true;
-			public bool BackFunctionEnabled = true;
+			public bool? CloseFunctionEnabled = true;
+			public bool? BackFunctionEnabled = true;
 
-			public int Height = 400;
-			public int Width = 600;
-			public int Left = 20;
-			public int Top = 40;
+			public int? Height = null;
+			public int? Width = null;
+			public int? Left = null;
+			public int? Top = null;
 
-			public bool NotBlickBVE = false;
-			public string BveExeFileName = "BveTs.exe";
-			public string BveProcessName = "BveTs";
+			public bool NotBlickBVE = false;//独自機能のためnull非許容
+			public string BveExeFileName = "BveTs.exe";//独自機能のためnull非許容
+			public string BveProcessName = "BveTs";//独自機能のためnull非許容
 		}
 
 		CLArgs CheckCLArgs()
@@ -46,69 +46,57 @@ namespace caMon
 				{
 					if (App.CmdLArgs[i].StartsWith("#"))//#から始まる文字列は使用しない(コメント機能)
 						continue;
-
+					int tmp;
 					switch (App.CmdLArgs[i].ToLower())
 					{
 						case "/wa":
 						case "/wsta":
 						case "/wstat":
 						case "/wstate":
-							try
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.WindowState = App.CmdLArgs[++i].ToLower() switch
 							{
-								cla.WindowState = App.CmdLArgs[i + 1].ToLower() switch
-								{
-									"nm" => WindowState.Normal,
-									"mx" => WindowState.Maximized,
-									"mn" => WindowState.Minimized,
+								"nm" => WindowState.Normal,
+								"mx" => WindowState.Maximized,
+								"mn" => WindowState.Minimized,
 
-									"norm" => WindowState.Normal,
-									"maxm" => WindowState.Maximized,
-									"minm" => WindowState.Minimized,
+								"norm" => WindowState.Normal,
+								"maxm" => WindowState.Maximized,
+								"minm" => WindowState.Minimized,
 
-									"normal" => WindowState.Normal,
-									"maximized" => WindowState.Maximized,
-									"minimized" => WindowState.Minimized,
+								"normal" => WindowState.Normal,
+								"maximized" => WindowState.Maximized,
+								"minimized" => WindowState.Minimized,
 
-									_ => throw new NotImplementedException()
-								};
-								i++;//無事に実行できたらインクリメント
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("WState CAOption : {0}", e);
-							}
+								_ => null
+							};
 							break;
 
 						case "/wy":
 						case "/wsty":
 						case "/wstyl":
 						case "/wstyle":
-							try
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.WindowStyle = App.CmdLArgs[++i].ToLower() switch
 							{
-								cla.WindowStyle = App.CmdLArgs[i + 1].ToLower() switch
-								{
-									"no" => WindowStyle.None,
-									"sb" => WindowStyle.SingleBorderWindow,
-									"tl" => WindowStyle.ToolWindow,
-									"tb" => WindowStyle.ThreeDBorderWindow,
+								"no" => WindowStyle.None,
+								"sb" => WindowStyle.SingleBorderWindow,
+								"tl" => WindowStyle.ToolWindow,
+								"tb" => WindowStyle.ThreeDBorderWindow,
 
-									"none" => WindowStyle.None,
-									"singleborder" => WindowStyle.SingleBorderWindow,
-									"tool" => WindowStyle.ToolWindow,
-									"threedborder" => WindowStyle.ThreeDBorderWindow,
+								"none" => WindowStyle.None,
+								"singleborder" => WindowStyle.SingleBorderWindow,
+								"tool" => WindowStyle.ToolWindow,
+								"threedborder" => WindowStyle.ThreeDBorderWindow,
 
-									"singleborderwindow" => WindowStyle.SingleBorderWindow,
-									"toolwindow" => WindowStyle.ToolWindow,
-									"threedborderwindow" => WindowStyle.ThreeDBorderWindow,
+								"singleborderwindow" => WindowStyle.SingleBorderWindow,
+								"toolwindow" => WindowStyle.ToolWindow,
+								"threedborderwindow" => WindowStyle.ThreeDBorderWindow,
 
-									_ => throw new NotImplementedException()
-								};
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("WStyle CAOption : {0}", e);
-							}
+								_ => null
+							};
 							break;
 
 						case "/wl":
@@ -116,134 +104,86 @@ namespace caMon
 						case "/wstlo":
 						case "/wstloc":
 						case "/windowstartuplocation":
-							try
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.WindowStartupLocation = App.CmdLArgs[++i].ToLower() switch
 							{
-								cla.WindowStartupLocation = App.CmdLArgs[i + 1].ToLower() switch
-								{
-									"co"=>WindowStartupLocation.CenterOwner,
-									"cs"=>WindowStartupLocation.CenterScreen,
-									"mn"=>WindowStartupLocation.Manual,
+								"co" => WindowStartupLocation.CenterOwner,
+								"cs" => WindowStartupLocation.CenterScreen,
+								"mn" => WindowStartupLocation.Manual,
 
-									"centerowner" => WindowStartupLocation.CenterOwner,
-									"centerscreen" => WindowStartupLocation.CenterScreen,
-									"manual" => WindowStartupLocation.Manual,
+								"centerowner" => WindowStartupLocation.CenterOwner,
+								"centerscreen" => WindowStartupLocation.CenterScreen,
+								"manual" => WindowStartupLocation.Manual,
 
-									_ => throw new NotImplementedException()
-								};
-								i++;
-							}
-							catch(Exception e)
-							{
-								Console.WriteLine("Height CAOption : {0}", e);
-							}
+								_ => null
+							};
 							break;
 
 						case "/rm":
 						case "/resizemode":
-							try
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.ResizeMode = App.CmdLArgs[++i].ToLower() switch
 							{
-								cla.ResizeMode = App.CmdLArgs[i + 1].ToLower() switch
-								{
-									"no" => ResizeMode.NoResize,
-									"mn" => ResizeMode.CanMinimize,
-									"rs" => ResizeMode.CanResize,
-									"rg" => ResizeMode.CanResizeWithGrip,
+								"no" => ResizeMode.NoResize,
+								"mn" => ResizeMode.CanMinimize,
+								"rs" => ResizeMode.CanResize,
+								"rg" => ResizeMode.CanResizeWithGrip,
 
-									"noresize" => ResizeMode.NoResize,
-									"canminimize" => ResizeMode.CanMinimize,
-									"canresize" => ResizeMode.CanResize,
-									"canresizewithgrip" => ResizeMode.CanResizeWithGrip,
+								"noresize" => ResizeMode.NoResize,
+								"canminimize" => ResizeMode.CanMinimize,
+								"canresize" => ResizeMode.CanResize,
+								"canresizewithgrip" => ResizeMode.CanResizeWithGrip,
 
-									_ => throw new NotImplementedException()
-								};
-								i++;
-							}
-							catch(Exception e)
-							{
-								Console.WriteLine("ResizeMode CAOption : {0}", e);
-							}
+								_ => null
+							};
 							break;
 
 						case "/tm":
 						case "/topmost":
-							try
-							{
-								cla.Topmost = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("TopMost CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.Topmost = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 						case "/st":
 						case "/showintaskbar":
-							try
-							{
-								cla.ShowInTaskbar = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("ShowInTaskbar CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.ShowInTaskbar = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 						case "/f11e":
 						case "/f11enabled":
-							try
-							{
-								cla.F11Enabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("F11Enabled CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.F11Enabled = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 						case "/f12e":
 						case "/f12enabled":
-							try
-							{
-								cla.F12Enabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("F12Enabled CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.F12Enabled = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 						case "/cfe":
 						case "/closefunc":
 						case "/closefunction":
 						case "/closefunctionenabled":
-							try
-							{
-								cla.CloseFunctionEnabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("CloseFunctionEnabled CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.CloseFunctionEnabled = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 						case "/bfe":
 						case "/backfunc":
 						case "/backfunction":
 						case "/backfunctionenabled":
-							try
-							{
-								cla.BackFunctionEnabled = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("BackFunctionEnabled CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.BackFunctionEnabled = BoolChecker(App.CmdLArgs[++i]);
 							break;
 
 
@@ -253,15 +193,10 @@ namespace caMon
 						case "/heig":
 						case "/heigh":
 						case "/height":
-							try
-							{
-								cla.Height = int.Parse(App.CmdLArgs[i + 1]);
-								i++;
-							}
-							catch(Exception e)
-							{
-								Console.WriteLine("Height CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							if (int.TryParse(App.CmdLArgs[++i], out tmp))
+								cla.Height = tmp;
 							break;
 
 						case "/w":
@@ -269,57 +204,36 @@ namespace caMon
 						case "/wid":
 						case "/widt":
 						case "/width":
-							try
-							{
-								cla.Width = int.Parse(App.CmdLArgs[i + 1]);
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("Width CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							if (int.TryParse(App.CmdLArgs[++i], out tmp))
+								cla.Width = tmp;
 							break;
 
 						case "/l":
 						case "/le":
 						case "/lef":
 						case "/left"://ウィンドウ表示位置指定用
-							try
-							{
-								cla.Left = int.Parse(App.CmdLArgs[i + 1]);
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("Left CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							if (int.TryParse(App.CmdLArgs[++i], out tmp))
+								cla.Left = tmp;
 							break;
 						case "/t":
 						case "/to":
 						case "/top":
-							try
-							{
-								cla.Top = int.Parse(App.CmdLArgs[i + 1]);
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("Top CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							if (int.TryParse(App.CmdLArgs[++i], out tmp))
+								cla.Top = tmp;
 							break;
 
 						case "/nbbve":
 						case "/nblockbve":
 						case "/notblockbve":
-							try
-							{
-								cla.NotBlickBVE = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
-								i++;
-							}
-							catch (Exception e)
-							{
-								Console.WriteLine("NotBlockBve CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.NotBlickBVE = BoolChecker(App.CmdLArgs[++i]) ?? cla.NotBlickBVE;
 							break;
 
 						case "/bvefn":
@@ -327,27 +241,17 @@ namespace caMon
 						case "/bveexefname":
 						case "/bvefilename":
 						case "/bveexefilename":
-							try
-							{
-								cla.BveExeFileName = App.CmdLArgs[++i];
-							}
-							catch(Exception e)
-							{
-								Console.WriteLine("BveExeFileName CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.BveExeFileName = App.CmdLArgs[++i];
 							break;
 
 						case "/bvepn":
 						case "/bvepname":
 						case "/bveprocessname":
-							try
-							{
-								cla.BveProcessName = App.CmdLArgs[++i];
-							}
-							catch(Exception e)
-							{
-								Console.WriteLine("BveProcessName CAOption : {0}", e);
-							}
+							if (i == (App.CmdLArgs.Length - 1))
+								break;
+							cla.BveProcessName = App.CmdLArgs[++i];
 							break;
 
 						default://オプション設定の該当なし => モジュール確認
