@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
@@ -43,6 +44,28 @@ namespace caMon
 
 		readonly CLArgs CLA = null;
 
+		Process _BveProcess = null;
+		Process BveProcess
+		{
+			get
+			{
+				if (_BveProcess?.HasExited == true)//プロセスが存在する
+					return BveProcess;
+
+				foreach(var p in Process.GetProcessesByName(CLA.BveProcessName))
+				{
+					try
+					{
+						if (CLA.BveExeFileName.Equals(Path.GetFileName(p.MainModule.FileName)))
+							return (_BveProcess = p);
+					}catch(Exception)
+					{
+					}
+				}
+				return (_BveProcess= null);
+			}
+		}
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -51,10 +74,26 @@ namespace caMon
 
 			CLA = CheckCLArgs();
 
+			if (CLA.NotBlickBVE && !string.IsNullOrWhiteSpace(CLA.BveExeFileName) && !string.IsNullOrWhiteSpace(CLA.BveProcessName))
+			{
+				MouseDown += (_, _) => SetBveWindowToFront();
+				SetBveWindowToFront();
+			}
+
 			Selector_inst = CLA.selector_toRet ?? new selector.default_.SelectPage();//コマンドライン引数でセレクタが設定されてれば, それを使用する.
 
 			Selector_inst.PageChangeRequest += Selector_inst_PageChangeRequest;
 		}
+
+		private void SetBveWindowToFront()
+		{
+			//active window ref : https://dobon.net/vb/dotnet/process/appactivate.html
+			Process p = BveProcess;
+			if (p is not null)
+				Microsoft.VisualBasic.Interaction.AppActivate(p.Id);
+		}
+
+
 		private void MainWindowHeadder_Loaded(object sender, RoutedEventArgs e)
 		{
 			//ウィンドウの各種プロパティをセット

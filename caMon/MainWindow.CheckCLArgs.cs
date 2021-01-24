@@ -30,6 +30,10 @@ namespace caMon
 			public int Width = 600;
 			public int Left = 20;
 			public int Top = 40;
+
+			public bool NotBlickBVE = false;
+			public string BveExeFileName = "BveTs.exe";
+			public string BveProcessName = "BveTs";
 		}
 
 		CLArgs CheckCLArgs()
@@ -303,6 +307,49 @@ namespace caMon
 								Console.WriteLine("Top CAOption : {0}", e);
 							}
 							break;
+
+						case "/nbbve":
+						case "/nblockbve":
+						case "/notblockbve":
+							try
+							{
+								cla.NotBlickBVE = BoolChecker(App.CmdLArgs[i + 1]) ?? throw new NotImplementedException();
+								i++;
+							}
+							catch (Exception e)
+							{
+								Console.WriteLine("NotBlockBve CAOption : {0}", e);
+							}
+							break;
+
+						case "/bvefn":
+						case "/bvefname":
+						case "/bveexefname":
+						case "/bvefilename":
+						case "/bveexefilename":
+							try
+							{
+								cla.BveExeFileName = App.CmdLArgs[++i];
+							}
+							catch(Exception e)
+							{
+								Console.WriteLine("BveExeFileName CAOption : {0}", e);
+							}
+							break;
+
+						case "/bvepn":
+						case "/bvepname":
+						case "/bveprocessname":
+							try
+							{
+								cla.BveProcessName = App.CmdLArgs[++i];
+							}
+							catch(Exception e)
+							{
+								Console.WriteLine("BveProcessName CAOption : {0}", e);
+							}
+							break;
+
 						default://オプション設定の該当なし => モジュール確認
 
 							//ファイルの存在確認はLoadDllInstがやってくれる.
