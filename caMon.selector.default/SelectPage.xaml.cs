@@ -123,7 +123,7 @@ namespace caMon.selector.default_
 
 		private void LoadBtn_Click(object sender, RoutedEventArgs e)
 		{
-			SelectedPath = (ModsList_ListView.SelectedItem as FileVersionInfo).FileName;
+			SelectedPath = (ModsList_ListView.SelectedItem as FileVersionInfo)?.FileName;
 
 			if (string.IsNullOrWhiteSpace(SelectedPath))
 			{
