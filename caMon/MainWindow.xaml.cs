@@ -191,6 +191,7 @@ namespace caMon
 
 		private void MainWindowHeadder_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
+			ShowingPage?.Dispose();
 			SharedFuncs.SMem_RStop();
 		}
 
