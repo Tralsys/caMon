@@ -5,32 +5,23 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon_s.ico</ApplicationIcon>
-    <Version>2.1.2.1</Version>
+    <Version>2.2.0.0</Version>
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
     <Copyright>Copyright 2020 Tetsu Otter</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>2.1.2.1</AssemblyVersion>
-    <FileVersion>2.1.2.1</FileVersion>
+    <PackageLicenseFile></PackageLicenseFile>
     <PackageReleaseNotes>https://github.com/TetsuOtter/caMon/blob/master/caMon/releasenote.md</PackageReleaseNotes>
     <Description>It's a piece of cake Monitor! :)
 WPFで作成されたページを表示します</Description>
     <RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="icon_s.ico" />
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="TR.BIDSSMemLib.rw" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>

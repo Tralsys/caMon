@@ -6,9 +6,9 @@
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
     <Product>BIDS Project</Product>
-		<Version>1.0.0.2</Version>
+		<Version>2.0.0.0</Version>
     <Copyright>Copyright (C) 2020 Tetsu Otter</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseFile></PackageLicenseFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
@@ -16,6 +16,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>https://github.com/TetsuOtter/caMon/blob/master/caMon.IPages/releasenote.md</PackageReleaseNotes>
     <Description>This library contains the definition of the interface that the caMon page add-on module should have.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,14 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="TR.BIDSSMemLib.rw" Version="1.0.2" />
+    <PackageReference Include="TR.BIDSSMemLib.rw" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

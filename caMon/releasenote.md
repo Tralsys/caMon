@@ -1,3 +1,6 @@
+# 2.2.0.0
+Update the referencing version of BIDSSMemLib being referenced to version 2.0.0.
+
 # 2.1.2.1
 Update TargetFramework to net5.0-windows
 

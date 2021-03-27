@@ -1,5 +1,7 @@
 ﻿using System.Windows.Controls;
 
+using TR.BIDSSMemLib;
+
 namespace caMon.pages.sample
 {
 	/// <summary>
@@ -15,7 +17,7 @@ namespace caMon.pages.sample
 
 			DataContext = OtB;//OpenDをBindingできるように
 
-			SharedFuncs.SML.SMC_OpenDChanged += SML_SMC_OpenDChanged;//openBVE Dataが更新された際に実行される処理を登録する
+			SMemLib.SMC_OpenDChanged += SML_SMC_OpenDChanged;//openBVE Dataが更新された際に実行される処理を登録する
 		}
 
 		/// <summary>openBVE Dataが更新された際に実行されるように登録するメソッド</summary>

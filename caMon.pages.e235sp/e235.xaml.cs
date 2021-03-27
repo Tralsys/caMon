@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 
 using TR;
+using TR.BIDSSMemLib;
 
 namespace caMon.pages.e235sp
 {
@@ -23,7 +24,7 @@ namespace caMon.pages.e235sp
 
 			camonIF = arg_camonIF;
 
-			SharedFuncs.SML.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
+			SMemLib.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
 
 			timer.Tick += Timer_Tick;
 			timer.Interval = new TimeSpan(0, 0, 0, 0, 40);

@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 
 using TR;
+using TR.BIDSSMemLib;
 
 namespace caMon.pages.e233sp
 {
@@ -35,7 +36,8 @@ namespace caMon.pages.e233sp
 
 			camonIF = arg_camonIF;
 
-			SharedFuncs.SML.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
+			SMemLib.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
+			
 			
 			poi16 = new Point(0, 0);
 			poi5 = new Point(0, 30);
