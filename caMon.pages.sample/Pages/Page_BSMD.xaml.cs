@@ -1,5 +1,7 @@
 ﻿using System.Windows.Controls;
 
+using TR.BIDSSMemLib;
+
 namespace caMon.pages.sample
 {
 	/// <summary>
@@ -15,7 +17,7 @@ namespace caMon.pages.sample
 
 			DataContext = bsmd2b;//Binding用
 
-			SharedFuncs.SML.SMC_BSMDChanged += SML_SMC_BSMDChanged;//BIDS Shared Memory Basic Dataが更新された際に実行される処理を登録する
+			SMemLib.SMC_BSMDChanged += SML_SMC_BSMDChanged;//BIDS Shared Memory Basic Dataが更新された際に実行される処理を登録する
 		}
 
 		/// <summary>BIDS Shared Memory Basic Dataが更新された際に実行されるように登録するメソッド</summary>

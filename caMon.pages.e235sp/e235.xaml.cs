@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 
 using TR;
+using TR.BIDSSMemLib;
 
 namespace caMon.pages.e235sp
 {
@@ -23,7 +24,7 @@ namespace caMon.pages.e235sp
 
 			camonIF = arg_camonIF;
 
-			SharedFuncs.SML.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
+			SMemLib.SMC_BSMDChanged += SMemLib_BIDSSMemChanged;
 
 			timer.Tick += Timer_Tick;
 			timer.Interval = new TimeSpan(0, 0, 0, 0, 40);
@@ -87,7 +88,7 @@ namespace caMon.pages.e235sp
 				deltaT = (double)(TimeVal - timeOld) / 1000;
 				deltaL = LocationVal - OldLocation;
 				RealSpeed = deltaL / deltaT;
-				Lumps();
+				Lamps();
 				BNum();
 				CurrentDisp();
 				BreakDisp();
@@ -109,7 +110,7 @@ namespace caMon.pages.e235sp
 		int KutenTimes = 0;
 		int KassoTimes = 0;
 		int RevOld = 999;
-		private void Lumps()
+		private void Lamps()
 		{
 			//事故表示灯
 			Accident.Visibility = BIDSSMemIsEnabled ? Visibility.Collapsed : Visibility.Collapsed;

@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TR.BIDSSMemLib;
+﻿using TR.BIDSSMemLib;
 
 namespace caMon
 {
 	static public class SharedFuncs
 	{
-		static public SMemLib SML;
+		static SharedFuncs() => SMemLib.Begin();
+		
 
-		static SharedFuncs()
-		{
-			SML = new SMemLib();
-		}
-
-		static public void SMem_RStart() => SML.ReadStart();
-		static public void SMem_RStop() => SML.ReadStop();
+		static public void SMem_RStart() => SMemLib.ReadStart();
+		static public void SMem_RStop() => SMemLib.ReadStop();
 	}
 }

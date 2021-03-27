@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
+using TR.BIDSSMemLib;
+
 namespace caMon.pages.sample
 {
 	/// <summary>
@@ -56,7 +58,7 @@ namespace caMon.pages.sample
 			{
 				ArrayElems[i] = new TextBlock()
 				{
-					Text = (SharedFuncs.SML.PanelA.Length > i ? SharedFuncs.SML.PanelA[i] : 0).ToString(),//初期値の設定
+					Text = (SMemLib.PanelA.Length > i ? SMemLib.PanelA[i] : 0).ToString(),//初期値の設定
 					HorizontalAlignment = HorizontalAlignment.Center,
 					VerticalAlignment = VerticalAlignment.Center
 				};
@@ -68,7 +70,7 @@ namespace caMon.pages.sample
 			}
 			#endregion
 
-			SharedFuncs.SML.SMC_PanelDChanged += SML_SMC_PanelDChanged;//Panel Dataが更新された際に実行される処理を登録する
+			SMemLib.SMC_PanelDChanged += SML_SMC_PanelDChanged;//Panel Dataが更新された際に実行される処理を登録する
 		}
 
 		/// <summary>Panel Dataが更新された際に実行されるように登録するメソッド</summary>

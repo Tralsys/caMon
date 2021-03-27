@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
@@ -8,8 +8,8 @@
 		<Company>Tech Otter</Company>
 		<Product>BIDS Project</Product>
 		<Copyright>Copyright (C) 2020 Tetsu Otter</Copyright>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<Version>1.0.0.1</Version>
+		<PackageLicenseFile></PackageLicenseFile>
+		<Version>2.0</Version>
 		<Description>This library contains the definition of the interface that the caMon selector page add-on module should have.</Description>
 		<RepositoryUrl>https://github.com/TetsuOtter/caMon</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -17,19 +17,13 @@
 		<PackageReleaseNotes>https://github.com/TetsuOtter/caMon/blob/master/caMon.ISelector/releasenote.md</PackageReleaseNotes>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Reference Include="PresentationFramework">
 			<HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll</HintPath>
 		</Reference>
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
 	</ItemGroup>
 
 	<ItemGroup>
