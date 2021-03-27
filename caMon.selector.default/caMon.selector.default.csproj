@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
 		<TargetFramework>net48</TargetFramework>
+		<LangVersion>9.0</LangVersion>
 		<UseWPF>true</UseWPF>
 		<Authors>Tetsu Otter</Authors>
 		<Company>Tech Otter</Company>

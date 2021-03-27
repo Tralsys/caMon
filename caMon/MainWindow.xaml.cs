@@ -22,7 +22,7 @@ namespace caMon
 			set
 			{
 				//NULLは許容されない
-				if (value == null)
+				if (value is null)
 					throw new Exception("Setting the null value is not allowed.");
 
 				//新ページの設定
@@ -31,7 +31,7 @@ namespace caMon
 				NavigationService.Navigate(value.FrontPage);
 
 				//旧ページの解放
-				if (__ShowingPage != null)
+				if (__ShowingPage is not null)
 				{
 					__ShowingPage.BackToHome -= OnBackToHome;
 					__ShowingPage.CloseApp -= OnCloseAppFired;
