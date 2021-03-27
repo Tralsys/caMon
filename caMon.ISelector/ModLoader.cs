@@ -25,7 +25,7 @@ namespace caMon
 				if (t.IsInterface)
 					continue;
 
-				if (Activator.CreateInstance(t) is T retval && retval != null)
+				if (Activator.CreateInstance(t) is T retval)//if true => retval is not null
 					return retval;
 			}
 

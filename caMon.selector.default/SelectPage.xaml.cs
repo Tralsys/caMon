@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -25,6 +23,8 @@ namespace caMon.selector.default_
 		static readonly string MODS_DIRECTORY_ALT_PATH = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location), "mods");
 		string using_mods_directory = MODS_DIRECTORY_ALT_PATH;
 		bool ModsList_ListView_Setup_Init_Done = false;
+		private bool disposedValue;
+
 		void ModsList_ListView_Setup_Init()
 		{
 			if (ModsList_ListView_Setup_Init_Done)//実行済みならやらなくてOK
@@ -58,7 +58,7 @@ namespace caMon.selector.default_
 			ModsList_ListView_Setup_Init();
 
 			//ref : https://dobon.net/vb/dotnet/file/getfiles.html
-			string[] items = null;
+			string[] items;
 			try
 			{
 				items = Directory.GetFiles(using_mods_directory + Path.DirectorySeparatorChar, "*.dll", SearchOption.TopDirectoryOnly);
@@ -73,11 +73,11 @@ namespace caMon.selector.default_
 
 			//ref : https://dobon.net/vb/dotnet/file/fileversion.html
 			//ref : https://qiita.com/Kosen-amai/items/def339ea71cc69eeb9d0
-			List<FileVersionInfo> fvil = new List<FileVersionInfo>();
+			List<FileVersionInfo> fvil = new();
 			foreach (var item in items)
 			{
 				var fv = FileVersionInfo.GetVersionInfo(item);
-				if (fv != null)
+				if (fv is not null)
 					fvil.Add(fv);
 			}
 
@@ -92,8 +92,7 @@ namespace caMon.selector.default_
 		private bool ChooseCustomDirectory()
 		{
 			//ref : https://johobase.com/wpf-file-folder-common-dialog/
-			var dig = new CommonOpenFileDialog();
-			dig.IsFolderPicker = true;
+			CommonOpenFileDialog dig = new() { IsFolderPicker = true };
 
 			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
 			{
@@ -113,8 +112,23 @@ namespace caMon.selector.default_
 		public event EventHandler CloseApp;
 		public event EventHandler<PageChangeEventArgs> PageChangeRequest;
 
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!disposedValue)
+			{
+				if (disposing)
+				{
+					//Dispose managed object
+				}
+
+				disposedValue = true;
+			}
+		}
+
 		public void Dispose()
 		{
+			Dispose(disposing: true);
+			GC.SuppressFinalize(this);
 		}
 
 		private void BackBtn_Click(object sender, RoutedEventArgs e) => BackToHome?.Invoke(this, null);
@@ -123,7 +137,7 @@ namespace caMon.selector.default_
 
 		private void LoadBtn_Click(object sender, RoutedEventArgs e)
 		{
-			SelectedPath = (ModsList_ListView.SelectedItem as FileVersionInfo).FileName;
+			SelectedPath = (ModsList_ListView.SelectedItem as FileVersionInfo)?.FileName;
 
 			if (string.IsNullOrWhiteSpace(SelectedPath))
 			{

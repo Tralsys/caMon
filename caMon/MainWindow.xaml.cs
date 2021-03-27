@@ -22,7 +22,7 @@ namespace caMon
 			set
 			{
 				//NULLは許容されない
-				if (value == null)
+				if (value is null)
 					throw new Exception("Setting the null value is not allowed.");
 
 				//新ページの設定
@@ -31,7 +31,7 @@ namespace caMon
 				NavigationService.Navigate(value.FrontPage);
 
 				//旧ページの解放
-				if (__ShowingPage != null)
+				if (__ShowingPage is not null)
 				{
 					__ShowingPage.BackToHome -= OnBackToHome;
 					__ShowingPage.CloseApp -= OnCloseAppFired;
@@ -117,7 +117,7 @@ namespace caMon
 			WindowStyle = CLA.WindowStyle ?? WindowStyle;
 		}
 
-		private void Selector_inst_PageChangeRequest(object? sender, PageChangeEventArgs? e)
+		private void Selector_inst_PageChangeRequest(object sender, PageChangeEventArgs e)
 		{
 			if(e is not null)
 			{
@@ -175,7 +175,7 @@ namespace caMon
 						break;
 				}
 			}
-			if (CLA.F11Enabled == true && e.Key == Key.F12)
+			if (CLA.F12Enabled == true && e.Key == Key.F12)
 			{
 				switch (MainWindowHeadder.WindowStyle)
 				{
@@ -191,6 +191,7 @@ namespace caMon
 
 		private void MainWindowHeadder_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
+			ShowingPage?.Dispose();
 			SharedFuncs.SMem_RStop();
 		}
 
