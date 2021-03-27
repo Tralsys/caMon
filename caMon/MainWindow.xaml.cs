@@ -117,7 +117,7 @@ namespace caMon
 			WindowStyle = CLA.WindowStyle ?? WindowStyle;
 		}
 
-		private void Selector_inst_PageChangeRequest(object? sender, PageChangeEventArgs? e)
+		private void Selector_inst_PageChangeRequest(object sender, PageChangeEventArgs e)
 		{
 			if(e is not null)
 			{
