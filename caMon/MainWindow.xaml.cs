@@ -175,7 +175,7 @@ namespace caMon
 						break;
 				}
 			}
-			if (CLA.F11Enabled == true && e.Key == Key.F12)
+			if (CLA.F12Enabled == true && e.Key == Key.F12)
 			{
 				switch (MainWindowHeadder.WindowStyle)
 				{
