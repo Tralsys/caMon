@@ -88,7 +88,7 @@ namespace caMon.pages.e235sp
 				deltaT = (double)(TimeVal - timeOld) / 1000;
 				deltaL = LocationVal - OldLocation;
 				RealSpeed = deltaL / deltaT;
-				Lumps();
+				Lamps();
 				BNum();
 				CurrentDisp();
 				BreakDisp();
@@ -110,7 +110,7 @@ namespace caMon.pages.e235sp
 		int KutenTimes = 0;
 		int KassoTimes = 0;
 		int RevOld = 999;
-		private void Lumps()
+		private void Lamps()
 		{
 			//事故表示灯
 			Accident.Visibility = BIDSSMemIsEnabled ? Visibility.Collapsed : Visibility.Collapsed;
