@@ -25,6 +25,7 @@ WPFで作成されたページを表示します</Description>
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BIDSDataUpdateNotifier\BIDSDataUpdateNotifier.csproj" />
     <ProjectReference Include="..\BIDSData_toBind\BIDSData_toBind.csproj" />
     <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
     <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />

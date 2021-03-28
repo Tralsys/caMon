@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="caMon.pages.BIDSDataUpdateNotifierUsecase.Lamps.ATSP"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+						 xmlns:local="clr-namespace:caMon.pages.BIDSDataUpdateNotifierUsecase.Lamps"
+						 xmlns:asmroot="clr-namespace:caMon.pages.BIDSDataUpdateNotifierUsecase"
+						 xmlns:bidsdataupdatenotifier="clr-namespace:BIDSDataUpdateNotifier.LampStateProvider;assembly=BIDSDataUpdateNotifier"
+						 d:DataContext="{d:DesignInstance Type=bidsdataupdatenotifier:ATSPLamps}"
+						 mc:Ignorable="d" >
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="Green" Color="#8C7"/>
+		<SolidColorBrush x:Key="Orange" Color="#FC7"/>
+		<SolidColorBrush x:Key="Red" Color="#F77"/>
+		
+		<SolidColorBrush x:Key="RivetColor" Color="#222"/>
+		<Thickness x:Key="RivetMargin">22</Thickness>
+
+		<Style TargetType="{x:Type asmroot:LampControl}" BasedOn="{StaticResource {x:Type asmroot:LampControl}}">
+			<Setter Property="Margin" Value="10,5"/>
+			<Setter Property="Padding" Value="10,5"/>
+			<Setter Property="FontSize" Value="16"/>
+		</Style>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Label Content="ATS-P Lamps" Background="Silver" Margin="20" Padding="10,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+		<Ellipse Width="8" Height="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Width}" Margin="{StaticResource RivetMargin}" Fill="{StaticResource RivetColor}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		<Ellipse Width="8" Height="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Width}" Margin="{StaticResource RivetMargin}" Fill="{StaticResource RivetColor}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+		<Ellipse Width="8" Height="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Width}" Margin="{StaticResource RivetMargin}" Fill="{StaticResource RivetColor}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+		<Ellipse Width="8" Height="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Width}" Margin="{StaticResource RivetMargin}" Fill="{StaticResource RivetColor}" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+		
+		<asmroot:LampControl ValueChecker="{Binding Power}" Content="Power" Grid.Row="1" Background="{StaticResource Green}"/>
+		<asmroot:LampControl ValueChecker="{Binding PatternOnComing}" Content="Pattern Oncoming" Grid.Row="2" Background="{StaticResource Orange}"/>
+		<asmroot:LampControl ValueChecker="{Binding NormalBrake}" Content="Normal Brake" Grid.Row="3" Background="{StaticResource Orange}"/>
+		<asmroot:LampControl ValueChecker="{Binding EmergencyBrake}" Content="Emergency Brake" Grid.Row="4" Background="{StaticResource Red}"/>
+		<asmroot:LampControl ValueChecker="{Binding BrakeCutOut}" Content="Brake Cut Out" Grid.Row="5" Background="{StaticResource Orange}"/>
+		<asmroot:LampControl ValueChecker="{Binding ATSP}" Content="ATS-P" Grid.Row="6" Background="{StaticResource Green}"/>
+		<asmroot:LampControl ValueChecker="{Binding Fault}" Content="Fault" Grid.Row="7" Background="{StaticResource Red}"/>
+	</Grid>
+</UserControl>
