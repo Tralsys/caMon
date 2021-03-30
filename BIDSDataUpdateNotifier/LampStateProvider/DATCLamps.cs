@@ -41,6 +41,8 @@
 			Power = -1
 		};
 
+		public DATCLamps() => LampsIndexes = DefaultIndexes;
+		public DATCLamps(in DATCLampsIndexes indexes) => LampsIndexes = indexes;
 
 		public override DATCLampsIndexes LampsIndexes
 		{

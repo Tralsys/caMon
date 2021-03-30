@@ -31,6 +31,8 @@
 			SystemCutOut = -1
 		};
 
+		public FDLamps() => LampsIndexes = DefaultIndexes;
+		public FDLamps(in FDLampsIndexes indexes) => LampsIndexes = DefaultIndexes;
 
 		public override FDLampsIndexes LampsIndexes
 		{
