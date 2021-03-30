@@ -2,12 +2,19 @@
 {
 	public interface IATSPLamps<T>
 	{
+		/// <summary>P電源</summary>
 		T Power { get; }
+		/// <summary>パターン接近</summary>
 		T PatternOnComing { get; }
+		/// <summary>常用ブレーキ(ブレーキ動作)</summary>
 		T NormalBrake { get; }
+		/// <summary>非常ブレーキ動作</summary>
 		T EmergencyBrake { get; }
+		/// <summary>ブレーキ開放</summary>
 		T BrakeCutOut { get; }
+		/// <summary>"ATS-P"表示灯</summary>
 		T ATSP { get; }
+		/// <summary>故障</summary>
 		T Fault { get; }
 	}
 	public class ATSPLamps : LampsClassBASE<ATSPLampsIndexes>, IATSPLamps<BoolValueProvideFromPanel>

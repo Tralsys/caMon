@@ -2,15 +2,18 @@
 {
 	public interface IATSSnLamps<T>
 	{
+		/// <summary>電源(オプション機能)</summary>
 		T Power { get; }
+		/// <summary>白色表示灯(ATS電源)</summary>
 		T WhiteLamp { get; }
+		/// <summary>赤色表示灯(ATS動作)</summary>
 		T RedLamp { get; }
 	}
 	public class ATSSnLamps : LampsClassBASE<ATSSnLampsIndexes>, IATSSnLamps<BoolValueProvideFromPanel>
 	{
 		static private readonly ATSSnLampsIndexes DefaultIndexes = new()
 		{
-			Power = 2,
+			Power = 247,//CT氏のATS-Snプラグインのみ
 			RedLamp = 1,
 			WhiteLamp = 0
 		};
