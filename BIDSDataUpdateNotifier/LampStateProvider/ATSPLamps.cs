@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Xml.Serialization;
-
-namespace BIDSDataUpdateNotifier.LampStateProvider
+﻿namespace BIDSDataUpdateNotifier.LampStateProvider
 {
 	public interface IATSPLamps<T>
 	{
@@ -13,7 +10,7 @@ namespace BIDSDataUpdateNotifier.LampStateProvider
 		T ATSP { get; }
 		T Fault { get; }
 	}
-	public class ATSPLamps : IATSPLamps<BoolValueProvideFromPanel>
+	public class ATSPLamps : LampsClassBASE<ATSPLampsIndexes>, IATSPLamps<BoolValueProvideFromPanel>
 	{
 		static private readonly ATSPLampsIndexes DefaultIndexes = new()
 		{
@@ -25,8 +22,6 @@ namespace BIDSDataUpdateNotifier.LampStateProvider
 			ATSP = 6,
 			Fault = 7,
 		};
-		static private readonly string SettingXMLFileName = typeof(ATSPLamps).FullName + ".xml";
-		static private readonly XmlSerializer IndexXmlSerializer = new(typeof(ATSPLampsIndexes));
 
 		public BoolValueProvideFromPanel Power { get; } = new(DefaultIndexes.Power);
 		public BoolValueProvideFromPanel PatternOnComing { get; } = new(DefaultIndexes.PatternOnComing);
@@ -36,7 +31,7 @@ namespace BIDSDataUpdateNotifier.LampStateProvider
 		public BoolValueProvideFromPanel ATSP { get; } = new(DefaultIndexes.ATSP);
 		public BoolValueProvideFromPanel Fault { get; } = new(DefaultIndexes.Fault);
 
-		public ATSPLampsIndexes LampsIndexes
+		public override ATSPLampsIndexes LampsIndexes
 		{
 			get => new() { ATSP = ATSP.Index, BrakeCutOut = BrakeCutOut.Index, EmergencyBrake = EmergencyBrake.Index, Fault = Fault.Index, NormalBrake = NormalBrake.Index, PatternOnComing = PatternOnComing.Index, Power = Power.Index };
 			set
@@ -49,20 +44,6 @@ namespace BIDSDataUpdateNotifier.LampStateProvider
 				PatternOnComing.Index = value.PatternOnComing;
 				Power.Index = value.Power;
 			}
-		}
-
-
-		public void LoadIndexesFromXML()
-		{
-			using StreamReader sr = new(Path.Combine(ConstValues.DllDirectory, SettingXMLFileName));
-			if (IndexXmlSerializer.Deserialize(sr) is ATSPLampsIndexes indexes)
-				LampsIndexes = indexes;
-		}
-		public async void SaveIndexesToXML()
-		{
-			using StreamWriter sw = new(Path.Combine(ConstValues.DllDirectory, SettingXMLFileName));
-			IndexXmlSerializer.Serialize(sw, LampsIndexes);
-			await sw.FlushAsync();
 		}
 	}
 
