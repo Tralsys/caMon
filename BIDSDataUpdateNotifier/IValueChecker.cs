@@ -10,6 +10,6 @@ namespace BIDSDataUpdateNotifier
 		T Value { get; }
 		/// <summary>Raw Value</summary>
 		int RawValue { get; }
-		IValueUpdateTimingProvider ValueUpdateTimingProvider { get; set; }
+		IValueUpdateTimingProvider? ValueUpdateTimingProvider { get; set; }
 	}
 }

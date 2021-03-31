@@ -8,9 +8,9 @@ namespace BIDSDataUpdateNotifier
 {
 	public abstract class BoolValueProvider : IValueChecker<bool>
 	{
-		public abstract IValueUpdateTimingProvider ValueUpdateTimingProvider { get; set; }
+		public abstract IValueUpdateTimingProvider? ValueUpdateTimingProvider { get; set; }
 
-		public event PropertyChangedEventHandler PropertyChanged;
+		public event PropertyChangedEventHandler? PropertyChanged;
 		protected void OnPropertyChanged(in string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
 
@@ -43,7 +43,7 @@ namespace BIDSDataUpdateNotifier
 			if (0 <= Index && Index < array.Length)
 				RawValue = array[Index];
 		}
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		 => obj is string s && bool.TryParse(s, out bool result)
 			? Value == result
 			: base.Equals(obj);
@@ -57,7 +57,7 @@ namespace BIDSDataUpdateNotifier
 		public BoolValueProvideFromPanel(in int index) => Init(index);
 		public BoolValueProvideFromPanel(in int index, in IValueUpdateTimingProvider timingProvider) => Init(index, timingProvider);
 
-		private void Init(in int index = -1, in IValueUpdateTimingProvider timingProvider = null)
+		private void Init(in int index = -1, in IValueUpdateTimingProvider? timingProvider = null)
 		{
 			Index = index;
 
@@ -70,11 +70,11 @@ namespace BIDSDataUpdateNotifier
 				SMemLib.SMC_PanelDChanged += SMemLib_SMC_PanelDChanged;
 		}
 
-		private void SMemLib_SMC_PanelDChanged(object sender, TR.ValueChangedEventArgs<int[]> e) => ValueUpdater(e.NewValue);
-		private void ValueUpdateTimingProvider_Update(object sender, EventArgs e) => ValueUpdater(SMemLib.PanelA);
+		private void SMemLib_SMC_PanelDChanged(object? sender, TR.ValueChangedEventArgs<int[]> e) => ValueUpdater(e.NewValue);
+		private void ValueUpdateTimingProvider_Update(object? sender, EventArgs e) => ValueUpdater(SMemLib.PanelA);
 
-		private IValueUpdateTimingProvider _ValueUpdateTimingProvider = null;
-		public override IValueUpdateTimingProvider ValueUpdateTimingProvider
+		private IValueUpdateTimingProvider? _ValueUpdateTimingProvider = null;
+		public override IValueUpdateTimingProvider? ValueUpdateTimingProvider
 		{
 			get => _ValueUpdateTimingProvider;
 			set
