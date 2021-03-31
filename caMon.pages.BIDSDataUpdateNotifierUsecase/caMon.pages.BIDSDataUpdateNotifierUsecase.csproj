@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BIDSDataUpdateNotifier\BIDSDataUpdateNotifier.csproj" />
+    <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
+  </ItemGroup>
+
+</Project>

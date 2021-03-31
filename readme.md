@@ -6,8 +6,8 @@ BIDS共有メモリに接続し, BVE等から共有されたデータを表示�
 BIDS共有メモリが有効化された環境で, caMon.exeを実行するだけです.
 
 ## Hardware/Software Requirements
-.Net Core 3.0のWPFが使用できる環境であれば, どこでも使用できるはずです.  ARMであれ, x86であれ.  
-Windows10 Pro 64bit + Ryzen 2700のマシンで開発およびデバッグを行ったので, 類似の環境であれば動くはずです.  面倒なんでこれ以上の検証は積極的には行いません.
+.Net 5.0のWPFが使用できる環境であれば, どこでも使用できるはずです.  ARMであれ, x86であれ.    
+Windows10 Pro 64bitのマシンで開発およびデバッグを行ったので, 類似の環境であれば動くはずです.  面倒なんでこれ以上の検証は積極的には行いません.
 
 ## License
 This project is under the MIT License.
@@ -24,6 +24,17 @@ This project is under the MIT License.
   - セレクタに便利であると思われる関数も実装しています.
 - caMon.selector.default
   - デフォルトのセレクタ機能を提供するライブラリです.
+- BIDSData_toBind
+  - BIDSで共有される情報をバインディングで扱いやすいように変換して提供する機能を実装しています.
+  - 各modから使用する場合, nuget.org経由で参照して頂ければと思います.
+- BIDSDataUpdateNotifier
+  - BIDSで共有される情報をバインディングで扱いやすいように変換して提供する機能を実装しています.
+  - 表示灯に対応したプロパティを用意することで, 容易にBVEとの連動が実装できるようにしています.
+  - 将来的に, BIDSData_toBindの機能を吸収しようと考えています.
+  - 各modから使用する場合, nuget.org経由で参照して頂ければと思います.
+- caMon.pages.BIDSDataUpdateNotifierUsecase
+  - BIDSDataUpdateNotifierを使用したサンプルプロジェクトです.
+  - v1.0時点ではATS-P表示灯にのみ対応しています.
 
 以下のプロジェクトはアーカイブ的な扱いです.
 
