@@ -7,16 +7,16 @@ namespace caMon
 	/// </summary>
 	public partial class App : Application
 	{
-		internal static string[] CmdLArgs = null;//コマンドライン引数のリスト
-
 		//ref : https://www.atmarkit.co.jp/fdotnet/dotnettips/879wpfapparg/wpfapparg.html
 		private void Application_Startup(object sender, StartupEventArgs e)
 		{
-			if (e.Args.Length <= 0)
-				return;//CmdLArgsが0以下になるなら, CmdLArgsへの情報格納は行わない
+			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
 
-			CmdLArgs = new string[e.Args.Length];
-			e.Args.CopyTo(CmdLArgs, 0);
+			MainWindowSettings settings = new();
+			settings.SetSettings(e.Args);//UI要素を表示させる前に引数チェック
+
+			MainWindow = new MainWindow(settings);
+			MainWindow.Show();
 		}
 	}
 }
