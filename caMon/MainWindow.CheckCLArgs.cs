@@ -8,7 +8,35 @@ namespace caMon
 {
 	public partial class MainWindow : NavigationWindow
 	{
-		public class Settings
+		public interface IMainWindowSettings
+		{
+			ISelector? selector_toRet { get; set; }
+			IPages? page_toShow { get; set; }
+
+			WindowState? WindowState { get; set; }
+			WindowStyle? WindowStyle { get; set; }
+			WindowStartupLocation? WindowStartupLocation { get; set; }
+			ResizeMode? ResizeMode { get; set; }
+
+			bool? Topmost { get; set; }
+			bool? ShowInTaskbar { get; set; }
+
+			bool? F11Enabled { get; set; }
+			bool? F12Enabled { get; set; }
+
+			bool? CloseFunctionEnabled { get; set; }
+			bool? BackFunctionEnabled { get; set; }
+
+			int? Height { get; set; }
+			int? Width { get; set; }
+			int? Left { get; set; }
+			int? Top { get; set; }
+
+			bool NotBlickBVE { get; set; }//独自機能のためnull非許容
+			string BveExeFileName { get; set; }//独自機能のためnull非許容
+			string BveProcessName { get; set; }//独自機能のためnull非許容
+		}
+		public class Settings : IMainWindowSettings
 		{
 			public ISelector? selector_toRet { get; set; } = null;
 			public IPages? page_toShow { get; set; } = null;
