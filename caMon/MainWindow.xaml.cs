@@ -42,7 +42,7 @@ namespace caMon
 			}
 		}
 
-		readonly CLArgs CLA = null;
+		readonly Settings CLA = null;
 
 		Process _BveProcess = null;
 		Process BveProcess
@@ -66,11 +66,9 @@ namespace caMon
 			}
 		}
 
-		public MainWindow()
+		public MainWindow(in Settings settings)
 		{
-			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
-
-			CLA = CheckCLArgs();//UI要素を表示させる前に引数チェック
+			CLA = settings;
 
 			InitializeComponent();
 

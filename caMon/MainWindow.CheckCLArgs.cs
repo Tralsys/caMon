@@ -8,43 +8,39 @@ namespace caMon
 {
 	public partial class MainWindow : NavigationWindow
 	{
-		private class CLArgs
+		public class Settings
 		{
-			public ISelector? selector_toRet = null;
-			public IPages? page_toShow = null;
+			public ISelector? selector_toRet { get; set; } = null;
+			public IPages? page_toShow { get; set; } = null;
 
-			public WindowState? WindowState = null;
-			public WindowStyle? WindowStyle = null;
-			public WindowStartupLocation? WindowStartupLocation = null;
-			public ResizeMode? ResizeMode = null;
+			public WindowState? WindowState { get; set; } = null;
+			public WindowStyle? WindowStyle { get; set; } = null;
+			public WindowStartupLocation? WindowStartupLocation { get; set; } = null;
+			public ResizeMode? ResizeMode { get; set; } = null;
 
-			public bool? Topmost = null;
-			public bool? ShowInTaskbar = null;
+			public bool? Topmost { get; set; } = null;
+			public bool? ShowInTaskbar { get; set; } = null;
 
-			public bool? F11Enabled = true;
-			public bool? F12Enabled = true;
+			public bool? F11Enabled { get; set; } = true;
+			public bool? F12Enabled { get; set; } = true;
 
-			public bool? CloseFunctionEnabled = true;
-			public bool? BackFunctionEnabled = true;
+			public bool? CloseFunctionEnabled { get; set; } = true;
+			public bool? BackFunctionEnabled { get; set; } = true;
 
-			public int? Height = null;
-			public int? Width = null;
-			public int? Left = null;
-			public int? Top = null;
+			public int? Height { get; set; } = null;
+			public int? Width { get; set; } = null;
+			public int? Left { get; set; } = null;
+			public int? Top { get; set; } = null;
 
-			public bool NotBlickBVE = false;//独自機能のためnull非許容
-			public string BveExeFileName = "BveTs.exe";//独自機能のためnull非許容
-			public string BveProcessName = "BveTs";//独自機能のためnull非許容
-		}
+			public bool NotBlickBVE { get; set; } = false;//独自機能のためnull非許容
+			public string BveExeFileName { get; set; } = "BveTs.exe";//独自機能のためnull非許容
+			public string BveProcessName { get; set; } = "BveTs";//独自機能のためnull非許容
 
-		static CLArgs CheckCLArgs() => CheckCLArgs(App.CmdLArgs);
-
-		static CLArgs CheckCLArgs(in string[] CmdLArgs)
-		{
-			CLArgs cla = new();
-
-			if (CmdLArgs?.Length > 0)
+			public void SetSettings(in string[] CmdLArgs)
 			{
+				if (CmdLArgs.Length <= 0)
+					return;
+
 				for (int i = 0; i < CmdLArgs.Length; i++)
 				{
 					if (CmdLArgs[i].StartsWith("#"))//#から始まる文字列は使用しない(コメント機能)
@@ -58,11 +54,11 @@ namespace caMon
 						case "/wstate":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.WindowState = CmdLArgs[++i].ToLower() switch
+							WindowState = CmdLArgs[++i].ToLower() switch
 							{
-								"nm" or "norm" or "normal" => WindowState.Normal,
-								"mx" or "maxm" or "maximized" => WindowState.Maximized,
-								"mn" or "minm" or "minimized" => WindowState.Minimized,
+								"nm" or "norm" or "normal" => System.Windows.WindowState.Normal,
+								"mx" or "maxm" or "maximized" => System.Windows.WindowState.Maximized,
+								"mn" or "minm" or "minimized" => System.Windows.WindowState.Minimized,
 								_ => null
 							};
 							break;
@@ -73,12 +69,12 @@ namespace caMon
 						case "/wstyle":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.WindowStyle = CmdLArgs[++i].ToLower() switch
+							WindowStyle = CmdLArgs[++i].ToLower() switch
 							{
-								"no" or "none" => WindowStyle.None,
-								"sb" or "singleborder" or "singleborderwindow" => WindowStyle.SingleBorderWindow,
-								"tl" or "tool" or "toolwindow" => WindowStyle.ToolWindow,
-								"tb" or "threedborderwindow" => WindowStyle.ThreeDBorderWindow,
+								"no" or "none" => System.Windows.WindowStyle.None,
+								"sb" or "singleborder" or "singleborderwindow" => System.Windows.WindowStyle.SingleBorderWindow,
+								"tl" or "tool" or "toolwindow" => System.Windows.WindowStyle.ToolWindow,
+								"tb" or "threedborderwindow" => System.Windows.WindowStyle.ThreeDBorderWindow,
 								_ => null
 							};
 							break;
@@ -90,11 +86,11 @@ namespace caMon
 						case "/windowstartuplocation":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.WindowStartupLocation = CmdLArgs[++i].ToLower() switch
+							WindowStartupLocation = CmdLArgs[++i].ToLower() switch
 							{
-								"co" or "centerowner" => WindowStartupLocation.CenterOwner,
-								"cs" or "centerscreen" => WindowStartupLocation.CenterScreen,
-								"mn" or "manual" => WindowStartupLocation.Manual,
+								"co" or "centerowner" => System.Windows.WindowStartupLocation.CenterOwner,
+								"cs" or "centerscreen" => System.Windows.WindowStartupLocation.CenterScreen,
+								"mn" or "manual" => System.Windows.WindowStartupLocation.Manual,
 								_ => null
 							};
 							break;
@@ -103,12 +99,12 @@ namespace caMon
 						case "/resizemode":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.ResizeMode = CmdLArgs[++i].ToLower() switch
+							ResizeMode = CmdLArgs[++i].ToLower() switch
 							{
-								"no" or "noresize" => ResizeMode.NoResize,
-								"mn" or "canminimize" => ResizeMode.CanMinimize,
-								"rs" or "canresize" => ResizeMode.CanResize,
-								"rg" or "canresizewithgrip" => ResizeMode.CanResizeWithGrip,
+								"no" or "noresize" => System.Windows.ResizeMode.NoResize,
+								"mn" or "canminimize" => System.Windows.ResizeMode.CanMinimize,
+								"rs" or "canresize" => System.Windows.ResizeMode.CanResize,
+								"rg" or "canresizewithgrip" => System.Windows.ResizeMode.CanResizeWithGrip,
 								_ => null
 							};
 							break;
@@ -117,28 +113,28 @@ namespace caMon
 						case "/topmost":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.Topmost = BoolChecker(CmdLArgs[++i]);
+							Topmost = BoolChecker(CmdLArgs[++i]);
 							break;
 
 						case "/st":
 						case "/showintaskbar":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.ShowInTaskbar = BoolChecker(CmdLArgs[++i]);
+							ShowInTaskbar = BoolChecker(CmdLArgs[++i]);
 							break;
 
 						case "/f11e":
 						case "/f11enabled":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.F11Enabled = BoolChecker(CmdLArgs[++i]);
+							F11Enabled = BoolChecker(CmdLArgs[++i]);
 							break;
 
 						case "/f12e":
 						case "/f12enabled":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.F12Enabled = BoolChecker(CmdLArgs[++i]);
+							F12Enabled = BoolChecker(CmdLArgs[++i]);
 							break;
 
 						case "/cfe":
@@ -147,7 +143,7 @@ namespace caMon
 						case "/closefunctionenabled":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.CloseFunctionEnabled = BoolChecker(CmdLArgs[++i]);
+							CloseFunctionEnabled = BoolChecker(CmdLArgs[++i]);
 							break;
 
 						case "/bfe":
@@ -156,7 +152,7 @@ namespace caMon
 						case "/backfunctionenabled":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.BackFunctionEnabled = BoolChecker(CmdLArgs[++i]);
+							BackFunctionEnabled = BoolChecker(CmdLArgs[++i]);
 							break;
 
 
@@ -169,7 +165,7 @@ namespace caMon
 							if (i == (CmdLArgs.Length - 1))
 								break;
 							if (int.TryParse(CmdLArgs[++i], out tmp))
-								cla.Height = tmp;
+								Height = tmp;
 							break;
 
 						case "/w":
@@ -180,7 +176,7 @@ namespace caMon
 							if (i == (CmdLArgs.Length - 1))
 								break;
 							if (int.TryParse(CmdLArgs[++i], out tmp))
-								cla.Width = tmp;
+								Width = tmp;
 							break;
 
 						case "/l":
@@ -190,7 +186,7 @@ namespace caMon
 							if (i == (CmdLArgs.Length - 1))
 								break;
 							if (int.TryParse(CmdLArgs[++i], out tmp))
-								cla.Left = tmp;
+								Left = tmp;
 							break;
 						case "/t":
 						case "/to":
@@ -198,7 +194,7 @@ namespace caMon
 							if (i == (CmdLArgs.Length - 1))
 								break;
 							if (int.TryParse(CmdLArgs[++i], out tmp))
-								cla.Top = tmp;
+								Top = tmp;
 							break;
 
 						case "/nbbve":
@@ -206,7 +202,7 @@ namespace caMon
 						case "/notblockbve":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.NotBlickBVE = BoolChecker(CmdLArgs[++i]) ?? cla.NotBlickBVE;
+							NotBlickBVE = BoolChecker(CmdLArgs[++i]) ?? NotBlickBVE;
 							break;
 
 						case "/bvefn":
@@ -216,7 +212,7 @@ namespace caMon
 						case "/bveexefilename":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.BveExeFileName = CmdLArgs[++i];
+							BveExeFileName = CmdLArgs[++i];
 							break;
 
 						case "/bvepn":
@@ -224,7 +220,7 @@ namespace caMon
 						case "/bveprocessname":
 							if (i == (CmdLArgs.Length - 1))
 								break;
-							cla.BveProcessName = CmdLArgs[++i];
+							BveProcessName = CmdLArgs[++i];
 							break;
 
 						default://オプション設定の該当なし => モジュール確認
@@ -233,7 +229,7 @@ namespace caMon
 							try
 							{
 								//先にセレクタを確認
-								cla.selector_toRet = ModLoader.LoadDllInst<ISelector>(CmdLArgs[i]);
+								selector_toRet = ModLoader.LoadDllInst<ISelector>(CmdLArgs[i]);
 							}
 							catch (FileNotFoundException)
 							{
@@ -241,11 +237,11 @@ namespace caMon
 							}
 							catch (MissingMethodException)
 							{
-								LoadAndSetIPagesInstance(cla, CmdLArgs[i]);
+								LoadAndSetIPagesInstance(CmdLArgs[i]);
 							}
 							catch (EntryPointNotFoundException)//ISelectorではなかった
 							{
-								LoadAndSetIPagesInstance(cla, CmdLArgs[i]);
+								LoadAndSetIPagesInstance(CmdLArgs[i]);
 							}
 							catch (Exception e)
 							{
@@ -256,27 +252,25 @@ namespace caMon
 				}
 			}
 
-			return cla;
-		}
-
-		static void LoadAndSetIPagesInstance(CLArgs cla, in string path)
-		{
-			try
+			void LoadAndSetIPagesInstance(in string path)
 			{
-				cla.page_toShow = ModLoader.LoadDllInst<IPages>(path);
+				try
+				{
+					page_toShow = ModLoader.LoadDllInst<IPages>(path);
+				}
+				catch (Exception e)
+				{
+					System.Diagnostics.Debug.WriteLine(e);
+				}
 			}
-			catch (Exception e)
-			{
-				System.Diagnostics.Debug.WriteLine(e);
-			}
-		}
 
-		static bool? BoolChecker(in string s)
-			 => s.ToLower() switch
-			 {
-				 "t" or "tr" or "tru" or "true" => true,
-				 "f" or "fa" or "fal" or "fals" or "false" => false,
-				 _ => null
-			 };
+			static bool? BoolChecker(in string s)
+				 => s.ToLower() switch
+				 {
+					 "t" or "tr" or "tru" or "true" => true,
+					 "f" or "fa" or "fal" or "fals" or "false" => false,
+					 _ => null
+				 };
+		}
 	}
 }
