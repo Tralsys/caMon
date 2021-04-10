@@ -42,7 +42,7 @@ namespace caMon
 			}
 		}
 
-		readonly Settings CLA = null;
+		readonly IMainWindowSettings CLA = null;
 
 		Process _BveProcess = null;
 		Process BveProcess
@@ -66,7 +66,7 @@ namespace caMon
 			}
 		}
 
-		public MainWindow(in Settings settings)
+		public MainWindow(in IMainWindowSettings settings)
 		{
 			CLA = settings;
 

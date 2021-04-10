@@ -12,7 +12,7 @@ namespace caMon
 		{
 			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
 
-			MainWindow.Settings settings = new();
+			MainWindowSettings settings = new();
 			settings.SetSettings(e.Args);//UI要素を表示させる前に引数チェック
 
 			MainWindow = new MainWindow(settings);
