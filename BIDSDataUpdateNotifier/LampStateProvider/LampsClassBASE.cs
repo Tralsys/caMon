@@ -3,7 +3,12 @@ using System.Xml.Serialization;
 
 namespace BIDSDataUpdateNotifier.LampStateProvider
 {
-	public abstract class LampsClassBASE<IndexClassType>
+	public interface ILampsClassBASE
+	{
+		void LoadIndexesFromXML();
+		void SaveIndexesToXML();
+	}
+	public abstract class LampsClassBASE<IndexClassType> : ILampsClassBASE
 	{
 		protected readonly string SettingXMLFileName = typeof(IndexClassType).FullName + ".xml";
 		static private readonly XmlSerializer IndexXmlSerializer = new(typeof(IndexClassType));
