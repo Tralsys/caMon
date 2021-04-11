@@ -4,11 +4,126 @@
 			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			xmlns:local="clr-namespace:caMon.pages.sample"
+			d:DataContext="{d:DesignInstance Type=local:CtrlerDataClass}"
 			mc:Ignorable="d" 
-			d:DesignHeight="450" d:DesignWidth="800"
+			d:DesignHeight="400" d:DesignWidth="640"
 			Title="Page_Ctrler">
 
+	<Page.Resources>
+		<Style TargetType="StackPanel">
+			<Setter Property="Orientation" Value="Horizontal"/>
+			<Setter Property="Background" Value="White"/>
+			<Setter Property="Margin" Value="4"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+		</Style>
+
+		<Style TargetType="ToggleButton">
+			<Setter Property="Margin" Value="4"/>
+			<Setter Property="Background" Value="White"/>
+		</Style>
+
+		<Style TargetType="TextBox">
+			<Setter Property="Width" Value="60"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="TextAlignment" Value="Right"/>
+			<Setter Property="Margin" Value="4"/>
+			<EventSetter Event="KeyDown" Handler="TextBox_KeyDown"/>
+		</Style>
+
+		<Style TargetType="Slider">
+			<Setter Property="Minimum" Value="0"/>
+			<Setter Property="Maximum" Value="1"/>
+			<Setter Property="Margin" Value="10"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+		</Style>
+	</Page.Resources>
+	
 	<Grid>
-		<Label Content="Controller Page&#xa;………準備中………" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="4*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="0.2*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Label Grid.Row="0" Grid.ColumnSpan="3" Content="Controller Page" Background="White" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10"/>
+		
+		<StackPanel Grid.Row="1">
+			<Label Content="Power"/>
+			<TextBox Text="{Binding Power, Mode=TwoWay}"/>
+			<Label Content="Current Value ... "/>
+			<Label Content="{Binding Power}"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="2">
+			<Label Content="Brake"/>
+			<TextBox Text="{Binding Brake, Mode=TwoWay}"/>
+			<Label Content="Current Value ... "/>
+			<Label Content="{Binding Brake}"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="3" Grid.ColumnSpan="3">
+			<Label Content="Reverser"/>
+			<ComboBox ItemsSource="{Binding RevPosDic}"
+								DisplayMemberPath="Value"
+								SelectedValue="{Binding Reverser, Mode=TwoWay}"
+								SelectedValuePath="Key"
+								Margin="4"
+								Width="120"/>
+			<Label Content="Current Value ... "/>
+			<Label Content="{Binding Reverser}"/>
+		</StackPanel>
+
+		<Slider Grid.Row="1" Grid.Column="2"
+						Value="{Binding PowerPos}"/>
+		<Slider Grid.Row="2" Grid.Column="2"
+						Value="{Binding BrakePos}"/>
+
+		<Grid Grid.Row="4" Background="White" Grid.ColumnSpan="3" TextBlock.FontSize="10">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="0.2*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<ToggleButton Content="Horn0" IsChecked="{Binding Horn0, Mode=TwoWay}" Grid.Row="0" Grid.Column="0"/>
+			<ToggleButton Content="Horn1" IsChecked="{Binding Horn1, Mode=TwoWay}" Grid.Row="1" Grid.Column="0"/>
+			<ToggleButton Content="Music Horn" IsChecked="{Binding MusicHorn, Mode=TwoWay}" Grid.Row="2" Grid.Column="0"/>
+			<ToggleButton Content="ConstSPD" IsChecked="{Binding ConstSPD, Mode=TwoWay}" Grid.Row="4" Grid.Column="0"/>
+
+			<ToggleButton Content="ATS S(Space)" IsChecked="{Binding ATS_S, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"/>
+			<ToggleButton Content="ATS A1(Insert)" IsChecked="{Binding ATS_A1, Mode=TwoWay}" Grid.Row="1" Grid.Column="2"/>
+			<ToggleButton Content="ATS A2(Delete)" IsChecked="{Binding ATS_A2, Mode=TwoWay}" Grid.Row="2" Grid.Column="2"/>
+			<ToggleButton Content="ATS B1(Home)" IsChecked="{Binding ATS_B1, Mode=TwoWay}" Grid.Row="1" Grid.Column="3"/>
+			<ToggleButton Content="ATS B2(End)" IsChecked="{Binding ATS_B2, Mode=TwoWay}" Grid.Row="2" Grid.Column="3"/>
+			<ToggleButton Content="ATS C1(PageUp)" IsChecked="{Binding ATS_C1, Mode=TwoWay}" Grid.Row="1" Grid.Column="4"/>
+			<ToggleButton Content="ATS C2(PageDown)" IsChecked="{Binding ATS_C2, Mode=TwoWay}" Grid.Row="2" Grid.Column="4"/>
+
+			<ToggleButton Content="ATS D(D2)" IsChecked="{Binding ATS_D, Mode=TwoWay}" Grid.Row="3" Grid.Column="2"/>
+			<ToggleButton Content="ATS E(D3)" IsChecked="{Binding ATS_E, Mode=TwoWay}" Grid.Row="3" Grid.Column="3"/>
+			<ToggleButton Content="ATS F(D4)" IsChecked="{Binding ATS_F, Mode=TwoWay}" Grid.Row="3" Grid.Column="4"/>
+			<ToggleButton Content="ATS G(D5)" IsChecked="{Binding ATS_G, Mode=TwoWay}" Grid.Row="3" Grid.Column="5"/>
+			<ToggleButton Content="ATS H(D6)" IsChecked="{Binding ATS_H, Mode=TwoWay}" Grid.Row="4" Grid.Column="2"/>
+			<ToggleButton Content="ATS I(D7)" IsChecked="{Binding ATS_I, Mode=TwoWay}" Grid.Row="4" Grid.Column="3"/>
+			<ToggleButton Content="ATS J(D8)" IsChecked="{Binding ATS_J, Mode=TwoWay}" Grid.Row="4" Grid.Column="4"/>
+			<ToggleButton Content="ATS K(D9)" IsChecked="{Binding ATS_K, Mode=TwoWay}" Grid.Row="4" Grid.Column="5"/>
+			<ToggleButton Content="ATS L(D0)" IsChecked="{Binding ATS_L, Mode=TwoWay}" Grid.Row="4" Grid.Column="6"/>
+		</Grid>
 	</Grid>
 </Page>
