@@ -166,5 +166,7 @@ namespace caMon.selector.default_
 				}
 			}
 		}
+
+		private void LoadSampleMod(object sender, RoutedEventArgs e) => PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { NewPage = SharedFuncs.GetPageSampleModInstance?.Invoke() });
 	}
 }

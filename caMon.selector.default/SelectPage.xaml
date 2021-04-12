@@ -51,7 +51,7 @@
 							Content="Load the selected mod"
 							Margin="5"
 							Padding="5"
-							Width="200"
+							Width="160"
 							HorizontalAlignment="Center"
 							Grid.Row="2"/>
 
@@ -67,6 +67,11 @@
 							Padding="5"/>
 			</StackPanel>
 			<StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+				<Button Click="LoadSampleMod"
+								Content="Load&#xa;SampleMod"
+								FontSize="8"
+								Margin="10,3"
+								Padding="2"/>
 				<Button Click="OpenCustomFile"
 							Content="Open File"
 							Margin="10,5"
