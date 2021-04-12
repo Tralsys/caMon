@@ -17,7 +17,8 @@
     <PackageReleaseNotes>https://github.com/TetsuOtter/caMon/blob/master/caMon.IPages/releasenote.md</PackageReleaseNotes>
     <Description>This library contains the definition of the interface that the caMon page add-on module should have.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-  </PropertyGroup>
+		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
+	</PropertyGroup>
 
   <ItemGroup>
     <Reference Include="PresentationFramework">

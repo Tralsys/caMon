@@ -12,6 +12,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RootNamespace>caMon.selector.default_</RootNamespace>
 		<Version>1.1.0</Version>
+		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>

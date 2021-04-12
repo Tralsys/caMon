@@ -18,7 +18,8 @@ WPFで作成されたページを表示します</Description>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-  </PropertyGroup>
+		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
+	</PropertyGroup>
 
   <ItemGroup>
     <None Remove="icon_s.ico" />
