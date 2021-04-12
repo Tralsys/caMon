@@ -12,6 +12,8 @@ namespace caMon
 		{
 			SharedFuncs.SMem_RStart();//コマンドライン引数のチェック前にSMemを起動させておく
 
+			SharedFuncs.GetPageSampleModInstance ??= () => new pages.sample.samplePage();//サンプルmodのインスタンスを取得するためのメソッドを登録
+
 			MainWindowSettings settings = new();
 			settings.SetSettings(e.Args);//UI要素を表示させる前に引数チェック
 
