@@ -19,6 +19,7 @@ WPFで作成されたページを表示します</Description>
     <PackageProjectUrl>https://github.com/TetsuOtter/caMon</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
 	</PropertyGroup>
 
   <ItemGroup>
