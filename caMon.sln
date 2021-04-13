@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BIDSDataUpdateNotifier", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "caMon.pages.BIDSDataUpdateNotifierUsecase", "caMon.pages.BIDSDataUpdateNotifierUsecase\caMon.pages.BIDSDataUpdateNotifierUsecase.csproj", "{E3DB191C-5F5D-42DE-8E20-E04623BCAC4C}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "caMon.MsixProject", "caMon.MsixProject\caMon.MsixProject.wapproj", "{56059E83-AC9E-4EB7-89AC-936ADDF27B76}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "caMon.StoreProj", "caMon.MsixProject\caMon.StoreProj.wapproj", "{56059E83-AC9E-4EB7-89AC-936ADDF27B76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
