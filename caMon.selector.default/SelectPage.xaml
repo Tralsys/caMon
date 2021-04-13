@@ -61,7 +61,7 @@
 							Margin="5"
 							Padding="5"
 							Width="60"/>
-				<Button Click="ChooseCustomDirectory"
+				<Button Click="ChooseCustomDirectory" IsEnabled="False"
 							Content="Open Directory"
 							Margin="10,5"
 							Padding="5"/>
