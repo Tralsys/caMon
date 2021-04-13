@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
+<!-- ref : https://ddlgjp.blogspot.com/2017/11/fall-cu-uwp-app.html-->
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
   <Identity
     Name="19169Tralsys.caMon"
     Publisher="CN=30B14FD8-8386-497D-904B-33504DAD8115"
-    Version="2.2.0.1" />
+    Version="0.0.0.0" />
 
   <Properties>
     <DisplayName>caMon</DisplayName>
@@ -47,11 +48,18 @@
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
+			<Extensions>
+				<uap5:Extension Category="windows.appExecutionAlias">
+					<uap5:AppExecutionAlias>
+						<uap5:ExecutionAlias Alias="caMon.exe"/>
+					</uap5:AppExecutionAlias>
+				</uap5:Extension>
+			</Extensions>
     </Application>
   </Applications>
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
-    <Capability Name="internetClient"/>
+    <!--<Capability Name="internetClient"/>-->
   </Capabilities>
 </Package>
