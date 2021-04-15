@@ -31,6 +31,7 @@ WPFで作成されたページを表示します</Description>
     <ProjectReference Include="..\BIDSData_toBind\BIDSData_toBind.csproj" />
     <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
     <ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
+    <ProjectReference Include="..\caMon.MainWindowSettings\caMon.MainWindowSettings.csproj" />
     <ProjectReference Include="..\caMon.pages.sample\caMon.pages.sample.csproj" />
     <ProjectReference Include="..\caMon.selector.default\caMon.selector.default.csproj" />
   </ItemGroup>
