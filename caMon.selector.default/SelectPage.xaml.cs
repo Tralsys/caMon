@@ -158,5 +158,23 @@ namespace caMon.selector.default_
 		}
 
 		private void LoadSampleMod(object sender, RoutedEventArgs e) => PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { NewPage = SharedFuncs.GetPageSampleModInstance?.Invoke() });
+
+		private void LoadInNewWindow_Click(object sender, RoutedEventArgs e)
+		{
+			SelectedPath = (ModsList_ListView.SelectedItem as FileVersionInfo)?.FileName;
+
+			if (string.IsNullOrWhiteSpace(SelectedPath))
+			{
+				MessageBox.Show("modの指定がされていません.");
+				return;
+			}
+			try
+			{
+				MultiWindowSupporter.Current.OpenNewWindow(ModLoader.LoadDllInst<IPages>(SelectedPath));
+			}catch(EntryPointNotFoundException ex)
+			{
+				MessageBox.Show("MODファイルにページ実装が見当たりませんでした\n" + ex.ToString(), "caMon Default Selector", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
+		}
 	}
 }

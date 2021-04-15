@@ -47,25 +47,28 @@
 			
 			<!--Row = 2-->
 
-			<Button Click="LoadBtn_Click"
-							Content="Load the selected mod"
+			<StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center"
+									Margin="0,0,100,0">
+				<Button Click="LoadBtn_Click"
+							Content="Load in Current Window"
 							Margin="5"
-							Padding="5"
-							Width="160"
-							HorizontalAlignment="Center"
-							Grid.Row="2"/>
+							Padding="5"/>
 
-			<StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Horizontal">
-				<Button Click="BackBtn_Click"
+				<Button Click="LoadInNewWindow_Click"
+							Content="Load in NewWindow"
+							Margin="5"
+							Padding="5"/>
+			</StackPanel>
+
+			<Button Click="BackBtn_Click"
+								Grid.Row="2"
+								HorizontalAlignment="Left"
 							Content="Back"
 							Margin="5"
 							Padding="5"
 							Width="60"/>
-				<Button Click="ChooseCustomDirectory" IsEnabled="False"
-							Content="Open Directory"
-							Margin="10,5"
-							Padding="5"/>
-			</StackPanel>
+			
+			
 			<StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
 				<Button Click="LoadSampleMod"
 								Content="Load&#xa;SampleMod"

@@ -11,13 +11,14 @@
 		<Copyright>Copyright 2020 Tetsu Otter</Copyright>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RootNamespace>caMon.selector.default_</RootNamespace>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
 		<ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
+		<ProjectReference Include="..\caMon.MultiWindowSupport\caMon.MultiWindowSupport.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
