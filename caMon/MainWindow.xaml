@@ -10,6 +10,7 @@
 									ShowsNavigationUI="False"
 									Background="Black"
 									Initialized="MainWindowHeadder_Initialized"
+									Loaded="MainWindowHeadder_Loaded"
 				PreviewKeyUp="MainWindowHeadder_PreviewKeyUp"
 									Closing="MainWindowHeadder_Closing"/>
 

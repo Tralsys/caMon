@@ -82,10 +82,6 @@ namespace caMon
 			Selector_inst = CLA.selector_toRet ?? new selector.default_.SelectPage();//コマンドライン引数でセレクタが設定されてれば, それを使用する.
 
 			Selector_inst.PageChangeRequest += Selector_inst_PageChangeRequest;
-
-			//初期ページはセレクタ画面
-			//表示するページの登録(イベント他)
-			ShowingPage = CLA.page_toShow ?? Selector_inst;
 		}
 
 		private void SetBveWindowToFront()
@@ -195,5 +191,13 @@ namespace caMon
 		}
 
 		private void MainWindowHeadder_Initialized(object sender, EventArgs e) => ApplyCLArgs();
+
+		private void MainWindowHeadder_Loaded(object sender, RoutedEventArgs e)
+		{
+			//初期ページはセレクタ画面
+			//表示するページの登録(イベント他)
+			//既に登録されていれば何も行わない
+			ShowingPage ??= CLA.page_toShow;
+		}
 	}
 }
