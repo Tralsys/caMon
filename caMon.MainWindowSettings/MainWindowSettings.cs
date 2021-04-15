@@ -7,8 +7,10 @@ namespace caMon
 {
 	public interface IMainWindowSettings
 	{
-		ISelector? selector_toRet { get; set; }
-		IPages? page_toShow { get; set; }
+		ISelector? selector_toRet { get; }
+		IPages? page_toShow { get; }
+		Type? selector_toRet_Type { get; set; }
+		Type? page_toShow_Type { get; set; }
 
 		WindowState? WindowState { get; set; }
 		WindowStyle? WindowStyle { get; set; }
@@ -35,8 +37,10 @@ namespace caMon
 	}
 	public class MainWindowSettings : IMainWindowSettings
 	{
-		public ISelector? selector_toRet { get; set; } = null;
-		public IPages? page_toShow { get; set; } = null;
+		public ISelector? selector_toRet { get => selector_toRet_Type?.GetConstructor(Array.Empty<Type>())?.Invoke(null) as ISelector; }
+		public IPages? page_toShow { get => page_toShow_Type?.GetConstructor(Array.Empty<Type>())?.Invoke(null) as IPages; }
+		public Type? selector_toRet_Type { get; set; } = null;
+		public Type? page_toShow_Type { get; set; } = null;
 
 		public WindowState? WindowState { get; set; } = null;
 		public WindowStyle? WindowStyle { get; set; } = null;
@@ -254,7 +258,7 @@ namespace caMon
 						try
 						{
 							//先にセレクタを確認
-							selector_toRet = ModLoader.LoadDllInst<ISelector>(CmdLArgs[i]);
+							selector_toRet_Type = ModLoader.LoadCompatibleTypeFromDLL<ISelector>(CmdLArgs[i]);
 						}
 						catch (FileNotFoundException)
 						{
@@ -281,7 +285,7 @@ namespace caMon
 		{
 			try
 			{
-				page_toShow = ModLoader.LoadDllInst<IPages>(path);
+				page_toShow_Type = ModLoader.LoadCompatibleTypeFromDLL<IPages>(path);
 			}
 			catch (Exception e)
 			{
