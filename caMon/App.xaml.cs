@@ -17,8 +17,13 @@ namespace caMon
 			MainWindowSettings settings = new();
 			settings.SetSettings(e.Args);//UI要素を表示させる前に引数チェック
 
-			MainWindow = new MainWindow(settings);
-			MainWindow.Show();
+			MultiWindowSupporter.Current.WindowInstanceCreator = () =>
+			{
+				MainWindow mw = new(settings);
+				return mw;
+			};
+
+			MainWindow = MultiWindowSupporter.Current.OpenNewWindow(settings.page_toShow) as Window;
 		}
 	}
 }
