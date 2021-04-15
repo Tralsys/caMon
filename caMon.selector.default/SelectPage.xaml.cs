@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 
-using Microsoft.WindowsAPICodePack.Dialogs;
+using Microsoft.Win32;
 
 namespace caMon.selector.default_
 {
@@ -20,7 +19,7 @@ namespace caMon.selector.default_
 		public SelectPage() => InitializeComponent();
 		
 		private void Page_Loaded(object sender, RoutedEventArgs e) => ModsList_ListView_SetUp();//初期化されても表示されない可能性があるため
-		static readonly string MODS_DIRECTORY_ALT_PATH = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location), "mods");
+		static readonly string MODS_DIRECTORY_ALT_PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Tralsys", "caMon", "mods");
 		string using_mods_directory = MODS_DIRECTORY_ALT_PATH;
 		bool ModsList_ListView_Setup_Init_Done = false;
 		private bool disposedValue;
@@ -46,8 +45,8 @@ namespace caMon.selector.default_
 
 		bool CheckChooseOtherDirectory()
 		{
-			if (MessageBox.Show("指定されたフォルダに, 使用可能なファイルが見当たりませんでした.  別のフォルダを選択しますか?\nCurrentSearchingLocation : " + using_mods_directory, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-				return ChooseCustomDirectory() && ModsList_ListView_SetUp();
+			if (MessageBox.Show("指定されたフォルダに, 使用可能なファイルが見当たりませんでした.  特定のMODファイルを選択しますか?\nCurrentSearchingLocation : " + using_mods_directory, "caMon.selector.default", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+			{ OpenCustomFile(this, null); return true; }
 
 			return false;//デフォルトは失敗
 
@@ -91,15 +90,6 @@ namespace caMon.selector.default_
 		}
 		private bool ChooseCustomDirectory()
 		{
-			//ref : https://johobase.com/wpf-file-folder-common-dialog/
-			CommonOpenFileDialog dig = new() { IsFolderPicker = true };
-
-			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
-			{
-				using_mods_directory = dig.FileName;
-				return ModsList_ListView_SetUp();
-			}
-
 			return false;
 		}
 		private void ChooseCustomDirectory(object sender, RoutedEventArgs e) => ChooseCustomDirectory();
@@ -152,10 +142,10 @@ namespace caMon.selector.default_
 
 		private void OpenCustomFile(object sender, RoutedEventArgs e)
 		{
-			//ref : https://johobase.com/wpf-file-folder-common-dialog/
-			var dig = new CommonOpenFileDialog();
-			dig.Filters.Add(new CommonFileDialogFilter("*.dll", "*.dll"));
-			if (dig.ShowDialog() == CommonFileDialogResult.Ok)
+
+			OpenFileDialog dig = new();
+			dig.Filter = "Page mod file(*.dll)|*.dll";
+			if (dig.ShowDialog() == true)
 			{
 				try
 				{
@@ -166,5 +156,7 @@ namespace caMon.selector.default_
 				}
 			}
 		}
+
+		private void LoadSampleMod(object sender, RoutedEventArgs e) => PageChangeRequest?.Invoke(this, new PageChangeEventArgs() { NewPage = SharedFuncs.GetPageSampleModInstance?.Invoke() });
 	}
 }

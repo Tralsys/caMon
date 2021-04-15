@@ -18,6 +18,7 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>

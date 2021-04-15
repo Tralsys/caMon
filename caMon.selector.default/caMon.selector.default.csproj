@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>net48</TargetFramework>
+		<TargetFramework>net5.0-windows</TargetFramework>
 		<LangVersion>9.0</LangVersion>
 		<UseWPF>true</UseWPF>
 		<Authors>Tetsu Otter</Authors>
@@ -12,6 +12,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RootNamespace>caMon.selector.default_</RootNamespace>
 		<Version>1.1.0</Version>
+		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -24,11 +25,6 @@
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.WindowsAPICodePack-Core" Version="1.1.0.2" />
-	  <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
 	</ItemGroup>
 
 </Project>
