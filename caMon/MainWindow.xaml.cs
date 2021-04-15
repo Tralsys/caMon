@@ -10,25 +10,26 @@ namespace caMon
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : NavigationWindow
+	public partial class MainWindow : NavigationWindow, ICaMonPageHostable
 	{
 		/// <summary>ページセレクタのインスタンス.  起動中は不変</summary>
 		readonly ISelector Selector_inst = null;
 
 		IPages __ShowingPage = null;
-		IPages ShowingPage
+		public IPages ShowingPage
 		{
 			get => __ShowingPage;
 			set
 			{
-				//NULLは許容されない
-				if (value is null)
-					throw new Exception("Setting the null value is not allowed.");
+				if (ShowingPage is not null && ShowingPage == value)
+					return;//ページ推移前後が同じなら実行しない
+
+				IPages newPage = value ?? Selector_inst;
 
 				//新ページの設定
-				value.BackToHome += OnBackToHome;
-				value.CloseApp += OnCloseAppFired;
-				NavigationService.Navigate(value.FrontPage);
+				newPage.BackToHome += OnBackToHome;
+				newPage.CloseApp += OnCloseAppFired;
+				NavigationService.Navigate(newPage.FrontPage);
 
 				//旧ページの解放
 				if (__ShowingPage is not null)
@@ -38,7 +39,7 @@ namespace caMon
 					__ShowingPage.Dispose();
 				}
 
-				__ShowingPage = value;//表示中ページ記録の更新
+				__ShowingPage = newPage;//表示中ページ記録の更新
 			}
 		}
 
