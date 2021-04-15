@@ -18,6 +18,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
 		<ProjectReference Include="..\caMon.ISelector\caMon.ISelector.csproj" />
+		<ProjectReference Include="..\caMon.MultiWindowSupport\caMon.MultiWindowSupport.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
