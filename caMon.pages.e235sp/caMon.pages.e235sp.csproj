@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<Authors>Tetsu Otter</Authors>
 		<Company>Tech Otter</Company>

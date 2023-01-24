@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net6.0;netcoreapp3.1</TargetFrameworks>
 		<Authors>Tetsu Otter</Authors>
 		<Company>Tech Otter</Company>
 		<Product>BIDS Project</Product>
