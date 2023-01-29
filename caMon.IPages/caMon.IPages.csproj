@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
     <RootNamespace>caMon</RootNamespace>
     <Authors>Tetsu Otter</Authors>
     <Company>Tech Otter</Company>
@@ -19,12 +20,6 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="PresentationFramework">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="TR.BIDSSMemLib.rw" Version="2.0.0" />
