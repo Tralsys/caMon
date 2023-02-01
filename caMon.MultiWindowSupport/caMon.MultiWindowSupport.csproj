@@ -14,15 +14,6 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Platforms>AnyCPU;x64;x86;ARM;ARM64</Platforms>
 	</PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\tetsu\Documents\GitHub\caMon\caMon.MultiWindowSupport\caMon.MultiWindowSupport.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\tetsu\Documents\GitHub\caMon\caMon.MultiWindowSupport\caMon.MultiWindowSupport.xml</DocumentationFile>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\caMon.IPages\caMon.IPages.csproj" />
   </ItemGroup>
