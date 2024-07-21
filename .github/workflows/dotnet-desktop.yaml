@@ -21,6 +21,7 @@ jobs:
     env:
       Solution_Name: caMon.sln
       Publish_Dir: publish
+      TmpPublish_Dir: publish_tmp
 
     steps:
     - name: Checkout
@@ -46,22 +47,36 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
+    - name: make mods directory
+      run: New-Item -Path ${{ env.Publish_Dir }}\mods -ItemType Directory
+
     - name: Publish (caMon.pages.BIDSDataUpdateNotifierUsecase)
-      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.Publish_Dir }}\mods caMon.pages.BIDSDataUpdateNotifierUsecase
+      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.TmpPublish_Dir }} caMon.pages.BIDSDataUpdateNotifierUsecase
       env:
-        Configuration: ${{ matrix.configuration }}  
+        Configuration: ${{ matrix.configuration }}
+    - name: move caMon.pages.BIDSDataUpdateNotifierUsecase
+      run: Move-Item -Path ${{ env.TmpPublish_Dir }}/caMon.pages.BIDSDataUpdateNotifierUsecase.dll -Destination ${{ env.Publish_Dir }}\mods\
+
     - name: Publish (e233sp)
-      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.Publish_Dir }}\mods caMon.pages.e233sp
+      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.TmpPublish_Dir }}\mods caMon.pages.e233sp
       env:
         Configuration: ${{ matrix.configuration }}
+    - name: move caMon.pages.e233sp
+      run: Move-Item -Path ${{ env.TmpPublish_Dir }}\mods\caMon.pages.e233sp.dll -Destination ${{ env.Publish_Dir }}\mods\
+
     - name: Publish (e235sp)
-      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.Publish_Dir }}\mods caMon.pages.e235sp
+      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.TmpPublish_Dir }}\mods caMon.pages.e235sp
       env:
         Configuration: ${{ matrix.configuration }}
+    - name: move caMon.pages.e235sp
+      run: Move-Item -Path ${{ env.TmpPublish_Dir }}\mods\caMon.pages.e235sp.dll -Destination ${{ env.Publish_Dir }}\mods\
+
     - name: Publish (sample)
-      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.Publish_Dir }}\mods caMon.pages.sample
+      run: dotnet publish -c ${{ matrix.configuration }} -o ${{ env.TmpPublish_Dir }}\mods caMon.pages.sample
       env:
         Configuration: ${{ matrix.configuration }}
+    - name: move caMon.pages.sample
+      run: Move-Item -Path ${{ env.TmpPublish_Dir }}\mods\caMon.pages.sample.dll -Destination ${{ env.Publish_Dir }}\mods\
 
     - name: remove pdb files
       run: Remove-Item -Path ${{ env.Publish_Dir }}\*.pdb -Force
