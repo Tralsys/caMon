@@ -82,7 +82,7 @@ jobs:
       run: Remove-Item -Path ${{ env.Publish_Dir }}\*.pdb -Force
   
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: caMon
         path: ${{ env.Publish_Dir }}
